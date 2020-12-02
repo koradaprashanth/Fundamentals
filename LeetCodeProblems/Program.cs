@@ -1,5 +1,7 @@
 ﻿using System;
 using LeetCodeProblems.DataStructures.Arrays;
+using LeetCodeProblems.Company.FB;
+using LeetCodeProblems.DataStructures.LinkedLists;
 
 namespace LeetCodeProblems
 {
@@ -7,7 +9,9 @@ namespace LeetCodeProblems
     {
         public static void Main(string[] args)
         {
+            #region DataStructures
 
+            #region Arrays
             //NextSquareNumbers nextSquare = new NextSquareNumbers();
             //nextSquare.NextSquareNumbersMethod();
 
@@ -66,6 +70,125 @@ namespace LeetCodeProblems
             //ReplaceElementsWithGreatestElement repObj = new ReplaceElementsWithGreatestElement();
             //repObj.ReplaceElements(repArray);
 
+            //Repeated Deletion Algorithm
+            //int[] repDelArray = new int[10] { 0, 0, 1, 1, 1, 2, 2, 3, 3, 4 };
+            //RepeatedDeletionAlgorithm rep = new RepeatedDeletionAlgorithm();
+            //int[] result = rep.RepeatedDeletionAlgorithmMethod(repDelArray);
+            //for (int i = 0; i < result.Length; i++)
+            //{
+            //    Console.WriteLine(result[i]);
+            //}
+            //int result = rep.RepeatedDeletionAlgorithmMethod(repDelArray);
+            //Console.WriteLine(result);
+            //Console.ReadLine();
+
+
+            //Move Zeros
+            //int[] moveZeros = new int[5] { 0, 1, 0, 3, 12 };
+            //MoveZeros mZArray = new MoveZeros();
+            //mZArray.MoveZeroes(moveZeros);
+
+            //Sort Array By Parity
+            //int[] parityArray = new int[4] { 3, 1, 2, 4 };
+            //SortArrayByParity sortArray = new SortArrayByParity();
+            //sortArray.SortArrayByParityMethod(parityArray);
+
+            //Height Checker
+            //int[] heightC = new int[6] { 1, 1, 4, 2, 1, 3 };
+            //HeightChecker hR = new HeightChecker();
+            //hR.HeightCheckerMethod(heightC);
+
+            //Max Consecutive Ones II
+            //int[] maxAr = new int[5] { 1, 0, 1, 1, 0 };
+            //MaxConsecutiveOnesII maxAree = new MaxConsecutiveOnesII();
+            //maxAree.FindMaxConsecutiveOnes(maxAr);
+
+            //Third Max Number
+            //int[] maxNumber = new int[4] { 2, 2, 3, 1 };
+            //ThirdMaxNumber trdm = new ThirdMaxNumber();
+            //Console.WriteLine(trdm.ThirdMaxMethod(maxNumber));
+            //Console.ReadLine();
+            #endregion
+
+            #region LinkedList
+
+            LinkedListCycle lnk = new LinkedListCycle();
+
+
+            #endregion
+
+            #endregion
+
+
+            #region Company
+
+            #region FB
+
+            // Find All Numbers Disappeared in an Array
+            //int[] missArray = new int[] { 4, 3, 2, 7, 8, 2, 3, 1 };
+            //FindMissingNumbersInArray aar = new FindMissingNumbersInArray();
+            //aar.FindDisappearedNumbers(missArray);
+
+            //A Big Number
+            //1000000001 1000000002 1000000003 1000000004 1000000005
+            //long[] longArr = new long[5] { 1000000001, 1000000002 ,1000000003 ,1000000004 ,1000000005 };
+            //ABigSum b = new ABigSum();
+            //b.aVeryBigSum(longArr);
+
+            //DesignerPDFViewer
+            //int[] ar = new int[] { 1, 3, 1, 3, 1, 4, 1, 3, 2, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5 };
+            //int[] ar = new int[26] { 6, 5, 7, 3, 6, 7, 3, 4, 4, 2, 3, 7, 1, 3, 7, 4, 6, 1, 2, 4, 3, 3, 1, 1, 3, 5 };
+            //DesignerPDFViewer ds = new DesignerPDFViewer();
+            //ds.designerPdfViewer(ar, "zbkkfhwplj");
+
+            //Left Rotation
+            //int[] ar = new int[] { 1, 2, 3, 4, 5 };
+            //LeftRotation lr = new LeftRotation();
+            //lr.rotLeft(ar,3);
+
+            
+
+
+            #endregion
+
+            #endregion
+
+
+
+
         }
     }
+
+
+
+    // Definition for singly-linked list.
+    public class ListNode
+    {
+        public int val;
+        public ListNode next;
+        public ListNode(int x)
+        {
+            val = x;
+            next = null;
+        }
+    }
+    
+    public class SinglyLinkedListNode {
+      
+        public int data;
+        public SinglyLinkedListNode next;
+        public SinglyLinkedListNode(int val)
+        {
+            data = val;
+        }
+     
+    }
+
+    public class DoublyListNode
+    {
+        public int val;
+        public DoublyListNode next, prev;
+        public DoublyListNode(int x) { val = x; }
+    }
+
 }
