@@ -2,6 +2,7 @@
 using LeetCodeProblems.DataStructures.Arrays;
 using LeetCodeProblems.Company.FB;
 using LeetCodeProblems.DataStructures.LinkedLists;
+using LeetCodeProblems.DataStructures.Recursion;
 
 namespace LeetCodeProblems
 {
@@ -146,14 +147,21 @@ namespace LeetCodeProblems
             //LeftRotation lr = new LeftRotation();
             //lr.rotLeft(ar,3);
 
-            
 
 
-            #endregion
 
             #endregion
 
+            #endregion
 
+            #region Recursion
+
+            //char[] str = new char[] { 'a', 'b', 'c', 'x' };
+            //ReverseAString rs = new ReverseAString();
+            ////rs.printReverse(str);
+            //rs.reverseString(str);
+
+            #endregion
 
 
         }
@@ -189,6 +197,19 @@ namespace LeetCodeProblems
         public int val;
         public DoublyListNode next, prev;
         public DoublyListNode(int x) { val = x; }
+    }
+
+    public class TreeNode
+    {
+        public int val;
+        public TreeNode left;
+        public TreeNode right;
+        public TreeNode(int val = 0, TreeNode left = null, TreeNode right = null)
+        {
+            this.val = val;
+            this.left = left;
+            this.right = right;
+        }
     }
 
 }
