@@ -3,6 +3,8 @@ using LeetCodeProblems.DataStructures.Arrays;
 using LeetCodeProblems.Company.FB;
 using LeetCodeProblems.DataStructures.LinkedLists;
 using LeetCodeProblems.DataStructures.Recursion;
+using LeetCodeProblems.DataStructures.HashTable;
+using System.Collections.Generic;
 
 namespace LeetCodeProblems
 {
@@ -163,7 +165,64 @@ namespace LeetCodeProblems
 
             #endregion
 
+            #region HashTables
 
+            //ContainsDuplicate cd = new ContainsDuplicate();
+            //bool val = cd.ContainsDuplicateMethod(new int[] { 1, 2, 3, 1 });
+
+            //Console.WriteLine(val);
+
+
+            //SingleNumber sn = new SingleNumber();
+            //int val = sn.SingleNumberMethod(new int[] { 4, 1, 2, 1, 2 });
+            //Console.WriteLine(val);
+
+
+            //IntersectionOfTwoArrays IA = new IntersectionOfTwoArrays();
+            //var lst= IA.IntersectionMethod(new int[] { 1, 2, 2, 1 }, new int[] { 2, 2 });
+            //for (int i = 0; i < lst.Length; i++)
+            //{
+            //    Console.WriteLine(lst[i]);
+            //}
+
+
+            //HappyNumber hn = new HappyNumber();
+            //Console.WriteLine(hn.IsHappy(7));
+
+
+            //int[] nums = new int[4] { 2, 7, 11, 15 }; int target = 9;
+
+            //TwoSum ts = new TwoSum();
+            //var arr= ts.TwoSumMethod(nums, target);
+            //for (int i = 0; i < arr.Length; i++)
+            //{
+            //    Console.WriteLine(arr[i]);
+            //}
+
+            //IsomorphicStrings iss= new IsomorphicStrings();
+            //Console.WriteLine(iss.IsIsomorphic("egg", "add"));
+
+            //MinimumIndexSum min = new MinimumIndexSum();
+            //var result = min.FindRestaurant(new string[] { "Shogun", "Tapioca Express", "Burger King", "KFC" },
+            //    new string[] { "KNN", "KFC", "Burger King", "Tapioca Express", "Shogun" });
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            //FirstUniqueCharacter fs = new FirstUniqueCharacter();
+            //Console.WriteLine(fs.FirstUniqChar("loveleetcode"));
+
+            IntersectionOfTwoArrays11 ins = new IntersectionOfTwoArrays11();
+            var result =ins.Intersect(new int[] { 1, 2, 2, 1 }, new int[] { 2, 2 });
+            for (int i = 0; i < result.Length; i++)
+            {
+                Console.WriteLine(result[i]);
+            }
+
+
+
+            #endregion
         }
     }
 

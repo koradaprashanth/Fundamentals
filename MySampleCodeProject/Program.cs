@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using System.Collections;
 using Concepts;
+using System.Threading.Tasks;
 
 namespace MySampleCodeProject
 {
     public class Program
     {
+
+
+        private static string result;
         public static void Main(string[] args)
         {
 
@@ -150,7 +154,7 @@ namespace MySampleCodeProject
 
             #region Stacks
 
-            Console.WriteLine(IsValid("(])"));
+            //Console.WriteLine(IsValid("(])"));
             //Console.WriteLine(IsValid("{[[]{}]}"));
 
             #endregion
@@ -161,8 +165,34 @@ namespace MySampleCodeProject
             #endregion
 
             //var result = gameWinner("wwwbbbbwww");
-            Console.ReadLine();
+            //Console.ReadLine();
+
+            //WriteSomething();
+            //Console.WriteLine(result);
+            //Console.ReadLine();
+            //static async Task<string> WriteSomething()
+            //{
+            //    await Task.Delay(5);
+            //    result = "Print Hello world!";
+            //    return "Something";
+            //}
+
+
+            //Dictionary<int, String> Names = new Dictionary<int, string>();
+            //Names.Add(10, "sushma");
+            //Names.Add(15, "prashanth");
+            //Names.Add(20, "sushma");
+            //Console.WriteLine("the value at key 15 =" + Names[15]);
+            //var output = new List<int[]>();
+            //var i = new int[] { 1, 2 };
+            //output.Add(i);
+            //i[0] = 10;
+            //Console.WriteLine(output[0][0]);
+
         }
+
+
+
 
         #region Arrays Implementation
 
@@ -690,7 +720,11 @@ namespace MySampleCodeProject
 
         #endregion
 
+        #region HashTables
 
+
+
+        #endregion
 
     }
 
