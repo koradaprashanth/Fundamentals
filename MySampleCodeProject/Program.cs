@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections;
 using Concepts;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace MySampleCodeProject
 {
@@ -189,7 +190,109 @@ namespace MySampleCodeProject
             //i[0] = 10;
             //Console.WriteLine(output[0][0]);
 
+            Program a = new Program();
+            var data= a.Solution(2014, "April", "May", "Wednesday");
+            Console.WriteLine(data);
+        
         }
+
+        public int Solution(int Y, string A, string B, string W)
+        {
+            // write your code in C# 6.0 with .NET 4.5 (Mono)
+             string[] Months ={"January","February","March","April",
+                "May","June","July","August","September","October","November","December"};
+
+            string[] Days ={"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};
+
+            MyCalendar dt = new MyCalendar(Months.ToList().IndexOf(W), Y);
+
+            int startMonthIndex = Months.ToList().IndexOf(A);
+            int endMonthIndex = Months.ToList().IndexOf(B);
+            while((dt.getMonthIndex() != startMonthIndex)||(!string.Equals(Days[dt.getDayOfMonthIndex()], "Monday", StringComparison.OrdinalIgnoreCase)))
+            {
+                dt.advance();
+            }
+            int daysSpent = 0;
+
+            while (dt.getMonthIndex() <= endMonthIndex)
+            {
+                daysSpent++;
+                dt.advance();
+            }
+            return daysSpent/7;
+        }
+
+        class MyCalendar
+        { // To store numeric values
+           private int day, month, year;
+           private int dayOfYear;
+            // it will be in range from 0 to 6 ( Signifying Sunday to Saturday 
+            private static int[] numDays = {
+                31,
+                28,
+                31,
+                30,
+                31,
+                30,
+                31,
+                31,
+                30,
+                31,
+                30,
+                31
+            };
+            public MyCalendar(int dayOfYear, int year)
+            {
+                day = 1;
+                month = 1; // January 
+                this.year = year;
+                this.dayOfYear = dayOfYear;
+            } // check if a year is leap year or not 
+            private static bool isLeapYear(int year)
+            {
+                return ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);
+            }
+            private static int getDays(int month, int year)
+            {
+                if (isLeapYear(year) && month == 1)
+                {
+                    // Feb
+                    return numDays[month] + 1;
+                }
+                else
+                {
+                    return numDays[month];
+                }
+            }
+            public void advance()
+            {
+                dayOfYear = (dayOfYear + 1) % 7;
+                day++;
+                int maxDaysInMonth = getDays(month, year);
+                // if it was last day of month, then increment the month 
+                if (day > maxDaysInMonth)
+                {
+                    day = 1;
+                    month++;
+                    // if it was 31st december, we need to change year also 
+                    if (month > 12)
+                    {
+                        month = 0;
+                        year++;
+                    }
+                }
+            }
+            public int getMonthIndex()
+            {
+                return month;
+            }
+            public int getDayOfMonthIndex()
+            {
+                return dayOfYear;
+            }
+           
+        }
+
 
 
 
@@ -829,5 +932,6 @@ namespace MySampleCodeProject
      * bool param_6 = obj.IsFull();
      */
     #endregion
+
 
 }

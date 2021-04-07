@@ -213,12 +213,16 @@ namespace LeetCodeProblems
             //FirstUniqueCharacter fs = new FirstUniqueCharacter();
             //Console.WriteLine(fs.FirstUniqChar("loveleetcode"));
 
-            IntersectionOfTwoArrays11 ins = new IntersectionOfTwoArrays11();
-            var result =ins.Intersect(new int[] { 1, 2, 2, 1 }, new int[] { 2, 2 });
-            for (int i = 0; i < result.Length; i++)
-            {
-                Console.WriteLine(result[i]);
-            }
+            //IntersectionOfTwoArrays11 ins = new IntersectionOfTwoArrays11();
+            //var result =ins.Intersect(new int[] { 1, 2, 2, 1 }, new int[] { 2, 2 });
+            //for (int i = 0; i < result.Length; i++)
+            //{
+            //    Console.WriteLine(result[i]);
+            //}
+
+
+            ContainsNearbyDuplicate cn = new ContainsNearbyDuplicate();
+            Console.WriteLine(cn.ContainsNearbyDuplicateMethod(new int[] { 1, 2, 3, 1 }, 3));
 
 
 
