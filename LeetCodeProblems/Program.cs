@@ -221,10 +221,76 @@ namespace LeetCodeProblems
             //}
 
 
-            ContainsNearbyDuplicate cn = new ContainsNearbyDuplicate();
-            Console.WriteLine(cn.ContainsNearbyDuplicateMethod(new int[] { 1, 2, 3, 1 }, 3));
+            //ContainsNearbyDuplicate cn = new ContainsNearbyDuplicate();
+            //Console.WriteLine(cn.ContainsNearbyDuplicateMethod(new int[] { 1, 2, 3, 1 }, 3));
+
+            //["eat","tea","tan","ate","nat","bat"]
+
+            //GroupAnagrams ana = new GroupAnagrams();
+            //ana.GroupAnagramsMethod(new string[] { "eat", "tea", "tan", "ate", "nat", "bat" });
+
+            //GroupShiftedStrings grpa = new GroupShiftedStrings();
+            //grpa.GroupStrings(new string[] {"abc", "bcd", "acef", "xyz", "az", "ba", "a", "z", "al" });
+
+            //ValidSudoku vs = new ValidSudoku();
+            //char[,] ch = new char[,] {   {'5', '3', '.', '.', '7', '.', '.', '.', '.'} 
+            //                            ,{'6', '.', '.', '1', '9', '5', '.', '.', '.'}
+            //                            ,{'.', '9', '8', '.', '.', '.', '.', '6', '.'}
+            //                            ,{'8', '.', '.', '.', '6', '.', '.', '.', '3'}
+            //                            ,{'4', '.', '.', '8', '.', '3', '.', '.', '1'}
+            //                            ,{'7', '.', '.', '.', '2', '.', '.', '.', '6'}
+            //                            ,{'.', '6', '.', '.', '.', '.', '2', '8', '.'}
+            //                            ,{'.', '.', '.', '4', '1', '9', '.', '.', '5'}
+            //                            ,{'.', '.', '.', '.', '8', '.', '.', '7', '9' } };
+
+            //vs.IsValidSudoku(ch);
+
+            //JewelsAndStones js = new JewelsAndStones();
+            //Console.WriteLine(js.NumJewelsInStones("aA", "aAAbbbb")) ;
+
+            //LongestSubstringWithoutRepeatingCharacters ls = new LongestSubstringWithoutRepeatingCharacters();
+            //Console.WriteLine(ls.LengthOfLongestSubstring(" "));
+
+            //TwoSumIII twoSum = new TwoSumIII();
+            //twoSum.Add(1);   // [] --> [1]
+            //twoSum.Add(3);   // [1] --> [1,3]
+            //twoSum.Add(5);   // [1,3] --> [1,3,5]
+            //Console.WriteLine(twoSum.Find(4));  // 1 + 3 = 4, return true
+            //Console.WriteLine(twoSum.Find(7));  // No two integers sum up to 7, return false
+            //["TwoSum","add","add","add","add","find","find","find","find"]
+            //[[],[0],[-1],[-1],[0],[-2],[0],[-1],[1]]
+
+            //twoSum.Add(0);   // [] --> [0]
+            //twoSum.Add(-1);   // [-1] --> [0,-1]
+            //twoSum.Add(-1);   // [0,-1] --> [0,-1,-1]
+            //twoSum.Add(0);   //[0,-1,-1] --> [0,-1,-1,0]
+            //Console.WriteLine(twoSum.Find(-2));
+            //Console.WriteLine(twoSum.Find(0));
+            //Console.WriteLine(twoSum.Find(-1));
+            //Console.WriteLine(twoSum.Find(1));
+
+            //_4SumII sm = new _4SumII();
+            //var nums1 = new int[] { 1, 2 };var nums2 = new int[] { -2, -1 };var nums3 = new int[] { -1, 2 };var nums4 =new int[] { 0, 2 };
+            //Console.WriteLine(sm.FourSumCount(nums1, nums2, nums3, nums4));
 
 
+            //nums = [1,1,1,2,2,3], k = 2
+
+            //TopKFreq tr = new TopKFreq();
+            //var data = tr.TopKFrequent(new int[] { 1, 1, 1, 2, 2, 3 }, 2);
+            //for (int i = 0; i < data.Length; i++)
+            //{
+            //    Console.Write(data[i]);
+            //}
+
+            
+            //Your ValidWordAbbr object will be instantiated and called as such:
+            UniqueWordAbbreviation obj = new UniqueWordAbbreviation(new string[] { "deer", "door", "cake", "card" });
+            Console.WriteLine(obj.IsUnique("dear"));
+            Console.WriteLine(obj.IsUnique("cart"));
+            Console.WriteLine(obj.IsUnique("cane"));
+            Console.WriteLine(obj.IsUnique("make"));
+            Console.WriteLine(obj.IsUnique("cake"));
 
             #endregion
         }
