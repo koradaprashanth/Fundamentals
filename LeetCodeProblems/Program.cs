@@ -4,7 +4,9 @@ using LeetCodeProblems.Company.FB;
 using LeetCodeProblems.DataStructures.LinkedLists;
 using LeetCodeProblems.DataStructures.Recursion;
 using LeetCodeProblems.DataStructures.HashTable;
+using LeetCodeProblems.DataStructures.Queues;
 using System.Collections.Generic;
+using LeetCodeProblems.DataStructures.Stacks;
 
 namespace LeetCodeProblems
 {
@@ -283,14 +285,71 @@ namespace LeetCodeProblems
             //    Console.Write(data[i]);
             //}
 
-            
+
             //Your ValidWordAbbr object will be instantiated and called as such:
-            UniqueWordAbbreviation obj = new UniqueWordAbbreviation(new string[] { "deer", "door", "cake", "card" });
-            Console.WriteLine(obj.IsUnique("dear"));
-            Console.WriteLine(obj.IsUnique("cart"));
-            Console.WriteLine(obj.IsUnique("cane"));
-            Console.WriteLine(obj.IsUnique("make"));
-            Console.WriteLine(obj.IsUnique("cake"));
+            //UniqueWordAbbreviation obj = new UniqueWordAbbreviation(new string[] { "deer", "door", "cake", "card" });
+            //Console.WriteLine(obj.IsUnique("dear"));
+            //Console.WriteLine(obj.IsUnique("cart"));
+            //Console.WriteLine(obj.IsUnique("cane"));
+            //Console.WriteLine(obj.IsUnique("make"));
+            //Console.WriteLine(obj.IsUnique("cake"));
+
+
+
+
+            #endregion
+
+            #region Queues
+
+
+            //WallsAndGates ws = new WallsAndGates();
+            //ws.WallsAndGatesdata(new int[][] { new int[] { 2147483647, -1, 0, 2147483647 },
+            //new int[] { 2147483647, 2147483647, 2147483647, -1 },
+            //new int[] { 2147483647, -1, 2147483647, -1 },
+            //new int[] { 0, -1, 2147483647, 2147483647 }});
+
+
+            //NumberOfIslands ns = new NumberOfIslands();
+            //Console.WriteLine(ns.NumIslandsdata(new char[][]{new char[] { '1', '1', '1', '1', '0'},
+            //                     new char[] {'1','1','0','1','0' },
+            //                     new char[] { '1', '1', '0', '0', '0'},
+            //                     new char[] {'0', '0', '0', '0', '0' }
+            //}));
+
+
+            //OpenTheLock Op = new OpenTheLock();
+            //Console.WriteLine(Op.OpenLock(new string[] { "0201", "0101", "0102", "1212", "2002" }, "0202"));
+
+
+            //PerfectSquares ps = new PerfectSquares();
+            //Console.WriteLine(ps.NumSquares(12)); 
+
+            //ValidParentheses vp = new ValidParentheses();
+            //Console.WriteLine(vp.IsValid("()[]{}"));
+
+            //EvaluateReversePolishNotation ep = new EvaluateReversePolishNotation();
+            //Console.WriteLine(ep.EvalRPN(new string[] { "4", "13", "5", "/", "+" }));
+
+
+            #endregion
+
+            #region Stacks
+
+            //DecodeString ds = new DecodeString();
+            //Console.WriteLine(ds.DecodeStringMethod("3[a2[c]]")); 
+
+            //FloodFill ff = new FloodFill();
+            //var data = ff.FloodFillMethod(new int[][] {
+            //new int[] {1, 1, 1 },
+            //new int[] {1, 1, 0 },
+            //new int[] {1, 0, 1 } },
+            //1, 1, 2);
+
+            Matrix mx = new Matrix();
+            var data= mx.UpdateMatrix(new int[][] {
+                new int[] {0, 0, 0},
+                new int[] {0, 1, 0 },
+                new int[] {1, 1, 1 } });
 
             #endregion
         }
