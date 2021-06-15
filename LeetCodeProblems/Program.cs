@@ -7,6 +7,7 @@ using LeetCodeProblems.DataStructures.HashTable;
 using LeetCodeProblems.DataStructures.Queues;
 using System.Collections.Generic;
 using LeetCodeProblems.DataStructures.Stacks;
+using LeetCodeProblems.DataStructures.BinarySearch;
 
 namespace LeetCodeProblems
 {
@@ -345,11 +346,26 @@ namespace LeetCodeProblems
             //new int[] {1, 0, 1 } },
             //1, 1, 2);
 
-            Matrix mx = new Matrix();
-            var data= mx.UpdateMatrix(new int[][] {
-                new int[] {0, 0, 0},
-                new int[] {0, 1, 0 },
-                new int[] {1, 1, 1 } });
+            //Matrix mx = new Matrix();
+            //var data= mx.UpdateMatrix(new int[][] {
+            //    new int[] {0, 0, 0},
+            //    new int[] {0, 1, 0 },
+            //    new int[] {1, 1, 1 } });
+
+            // s = "ab#c", t = "ad#c"
+            //"y#fo##f"            "y#f#o##f"
+
+            BackspaceCompare bc = new BackspaceCompare();
+            Console.WriteLine(bc.BackspaceCompareMethod("y#fo##f", "y#f#o##f"));
+
+            #endregion
+
+            #region BinarySearch
+
+            //nums = [4,5,6,7,0,1,2], target = 0
+
+            SearchRotatedSortedArray SR = new SearchRotatedSortedArray();
+            Console.WriteLine(SR.Search(new[] { 4, 5, 6, 7, 0, 1, 2 }, 0));
 
             #endregion
         }
