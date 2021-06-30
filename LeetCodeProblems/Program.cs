@@ -8,6 +8,9 @@ using LeetCodeProblems.DataStructures.Queues;
 using System.Collections.Generic;
 using LeetCodeProblems.DataStructures.Stacks;
 using LeetCodeProblems.DataStructures.BinarySearch;
+using System.Text.RegularExpressions;
+using System.Text;
+using System.Linq;
 
 namespace LeetCodeProblems
 {
@@ -364,8 +367,49 @@ namespace LeetCodeProblems
 
             //nums = [4,5,6,7,0,1,2], target = 0
 
-            SearchRotatedSortedArray SR = new SearchRotatedSortedArray();
-            Console.WriteLine(SR.Search(new[] { 4, 5, 6, 7, 0, 1, 2 }, 0));
+            //SearchRotatedSortedArray SR = new SearchRotatedSortedArray();
+            //Console.WriteLine(SR.Search(new[] { 4, 5, 6, 7, 0, 1, 2 }, 0));
+
+            /*
+
+            In C#, write a program that parses a sentence and replaces each word with the following: first letter, number of distinct characters between first and last character, and last letter. 
+            For example, Smooth would become S3h.Words are separated by spaces or non-alphabetic characters and these separators should be maintained in their original form and location in the answer.
+            The code must be syntactically correct and build in visual studio, either as a console or winforms application.
+            Please paste these instructions at the top of your completed assignment.
+
+            */
+            StringBuilder sb = new StringBuilder();
+            string st = "Smooth%Test Hello1Fine"; //given string
+            st += " "; // adding extra space to qualify the below conditions
+            StringBuilder localsb = new StringBuilder();
+            for (int i = 0; i < st.Length; i++)
+            {
+                if(!Char.IsLetter(st[i])){
+                    sb.Append(st[i].ToString());
+                    continue;
+                }
+
+                localsb.Append(st[i]);
+                if (!Char.IsLetter(st[i + 1]))
+                {
+                    string sts = "";
+                    string first = localsb[0].ToString();
+                    localsb.Remove(0, 1);
+                    string last= localsb[localsb.Length - 1].ToString();
+                    localsb.Remove(localsb.Length - 1, 1);
+                    var hs = new string(localsb.ToString().ToCharArray().Distinct().ToArray());
+                    sts = first + hs.Length + last;
+                    sb.Append(sts);
+                    localsb.Clear();
+                }
+                
+                if(st[i].ToString() ==" " && i == st.Length)
+                {
+                    break;
+                }                
+                
+            }
+            Console.WriteLine(sb);
 
             #endregion
         }
@@ -415,5 +459,6 @@ namespace LeetCodeProblems
             this.right = right;
         }
     }
+
 
 }

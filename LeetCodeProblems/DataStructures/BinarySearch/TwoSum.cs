@@ -24,4 +24,3 @@ namespace LeetCodeProblems.DataStructures.BinarySearch
         }
     }
 }
-}

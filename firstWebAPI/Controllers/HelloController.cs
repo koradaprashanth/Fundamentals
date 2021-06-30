@@ -12,6 +12,11 @@ namespace firstWebAPI.Controllers
     [ApiController]
     public class HelloController : ControllerBase
     {
+        public HelloController()
+        {
+
+        }
+
         [HttpGet]
         public IActionResult GetResult()
         {

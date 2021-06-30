@@ -29,4 +29,22 @@ namespace LeetCodeProblems.DataStructures.HashTable
 
         }
     }
+
+
+    public   class cars
+    {
+        public  void displayBrand()
+        {
+            Console.WriteLine("dasd");
+        }
+        
+    }
+
+    public class Maruti : cars
+    {
+        public new void displayBrand()
+        {
+            Console.WriteLine("Derived Class - I am Maruti");
+        }
+    }
 }

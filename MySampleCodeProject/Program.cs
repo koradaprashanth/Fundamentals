@@ -190,10 +190,31 @@ namespace MySampleCodeProject
             //i[0] = 10;
             //Console.WriteLine(output[0][0]);
 
-            Program a = new Program();
-            var data= a.Solution(2014, "April", "May", "Wednesday");
-            Console.WriteLine(data);
-        
+            //Program a = new Program();
+            //var data= a.Solution(2014, "April", "May", "Wednesday");
+            //Console.WriteLine(data);
+
+            Console.Write("Enter a Number : ");
+            int number = int.Parse(Console.ReadLine());
+            bool IsPrime = true;
+            for (int i = 2; i < number / 2; i++)
+            {
+                if (number % i == 0)
+                {
+                    IsPrime = false;
+                    break;
+                }
+            }
+            if (IsPrime)
+            {
+                Console.Write("Number is Prime.");
+            }
+            else
+            {
+                Console.Write("Number is not Prime.");
+            }
+            Console.ReadKey();
+
         }
 
         public int Solution(int Y, string A, string B, string W)
@@ -787,7 +808,7 @@ namespace MySampleCodeProject
             if (s.Length == 0)
                 return true;
 
-            bool isvalid = false;
+            //bool isvalid = false;
             Dictionary<char,char> dict = new Dictionary<char, char>();
             Stack<char> st = new Stack<char>();
 
