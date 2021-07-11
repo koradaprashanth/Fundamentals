@@ -4,6 +4,7 @@ using System.Collections;
 using Concepts;
 using System.Threading.Tasks;
 using System.Linq;
+using System.Threading;
 
 namespace MySampleCodeProject
 {
@@ -165,6 +166,8 @@ namespace MySampleCodeProject
 
             #endregion
 
+            #region MyCalender
+
             //var result = gameWinner("wwwbbbbwww");
             //Console.ReadLine();
 
@@ -194,28 +197,61 @@ namespace MySampleCodeProject
             //var data= a.Solution(2014, "April", "May", "Wednesday");
             //Console.WriteLine(data);
 
-            Console.Write("Enter a Number : ");
-            int number = int.Parse(Console.ReadLine());
-            bool IsPrime = true;
-            for (int i = 2; i < number / 2; i++)
-            {
-                if (number % i == 0)
-                {
-                    IsPrime = false;
-                    break;
-                }
-            }
-            if (IsPrime)
-            {
-                Console.Write("Number is Prime.");
-            }
-            else
-            {
-                Console.Write("Number is not Prime.");
-            }
-            Console.ReadKey();
+            #endregion
+
+
+
+            //Calculate();
+            //Console.Read();
+
+
 
         }
+
+        #region AsyncAwait
+
+        async static void Calculate()
+        {
+            //Task.Run(() => { Calculate1(); });
+            //Task.Run(() => { Calculate2(); });
+            //Task.Run(() => { Calculate3(); });
+
+            await Calculate1_2();
+            Calculate3();
+        }
+
+        async static Task Calculate1_2()
+        {
+            var result1 = await Task.Run(() => {
+
+                return Calculate1();
+            });
+
+            Calculate2(result1);
+        }
+
+        static int Calculate1()
+        {
+            Thread.Sleep(3000);
+            Console.WriteLine("Calculating result1");
+            return 100;
+        }
+
+        static int Calculate2(int result1)
+        {
+            Console.WriteLine("Calculating result2");
+            return result1 * 2;
+        }
+
+        static int Calculate3()
+        {
+            Console.WriteLine("Calculating result3");
+            return 300;
+        }
+
+        #endregion
+
+
 
         public int Solution(int Y, string A, string B, string W)
         {
