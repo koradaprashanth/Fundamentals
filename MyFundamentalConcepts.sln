@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29509.3
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MySampleCodeProject", "MySampleCodeProject\MySampleCodeProject.csproj", "{5C24931A-AE0A-4CA6-A400-2470076289E5}"
 EndProject
@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeetCodeProblems", "LeetCod
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "firstWebAPI", "firstWebAPI\firstWebAPI.csproj", "{04AB53C3-806F-439A-AFAE-F41B676A78E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "coreWebApp", "coreWebApp\coreWebApp.csproj", "{5E74AD93-6DEF-48DF-A38F-C56F0199A2F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "coreWebApp", "coreWebApp\coreWebApp.csproj", "{5E74AD93-6DEF-48DF-A38F-C56F0199A2F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicProblems", "BasicProblems\BasicProblems.csproj", "{CB097A38-B27F-4F67-9A75-6790144583F7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{5E74AD93-6DEF-48DF-A38F-C56F0199A2F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E74AD93-6DEF-48DF-A38F-C56F0199A2F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E74AD93-6DEF-48DF-A38F-C56F0199A2F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB097A38-B27F-4F67-9A75-6790144583F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB097A38-B27F-4F67-9A75-6790144583F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB097A38-B27F-4F67-9A75-6790144583F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB097A38-B27F-4F67-9A75-6790144583F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
