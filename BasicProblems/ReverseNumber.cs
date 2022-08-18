@@ -1,9 +1,16 @@
-﻿namespace BasicProblems
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace BasicProblems
 {
-    public class Palindrome
+    internal class ReverseNumber
     {
-        public int getPalindrome(int number)
+        public int getReverseNumber(int number)
         {
+            //1234
             int reminder;
             int sum = 0;
             while (number > 0)
@@ -17,5 +24,6 @@
 
             return sum;
         }
+
     }
 }
