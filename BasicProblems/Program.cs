@@ -46,7 +46,6 @@ public class Program
 
         #endregion
 
-
         #region SwappingNumber
 
         //SwappingNumber sn = new SwappingNumber();
