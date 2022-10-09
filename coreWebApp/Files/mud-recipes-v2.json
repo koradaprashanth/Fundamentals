@@ -1,1169 +1,3157 @@
 [
   {
     "FluidSystem": "versaclean",
-    "BaseFluids": [ "escaid-115", "escaid-110", "mineral-oil-lvt-200", "edc-95-11" ],
+    "BaseFluids": [
+      "escaid-115",
+      "escaid-110",
+      "mineral-oil-lvt-200",
+      "edc-95-11",
+      "escaid-120",
+      "edc-99-dw",
+      "edc-diamond"
+    ],
     "Recipes": [
       {
         "Density": 8.5,
         "Products": [
-          [ "FRESH WATER", null ],
-          [ "AnySalt", null ],
-          [ "VG-PLUS", 4.0 ],
-          [ "AnyBaseFluid", null ],
-          [ "LIME", 6.0 ],
-          [ "VERSAMUL", 8.0 ],
-          [ "M-I WATE (BARITE) BULK", null ],
-          [ "VERSACOAT", 2.0 ],
-          [ "VERSATROL", 4.0 ]
+          [
+            "FRESH WATER",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "VG-PLUS",
+            4.0
+          ],
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "LIME",
+            6.0
+          ],
+          [
+            "VERSAMUL",
+            8.0
+          ],
+          [
+            "M-I WATE (BARITE) BULK",
+            null
+          ],
+          [
+            "VERSACOAT",
+            2.0
+          ],
+          [
+            "VERSATROL",
+            4.0
+          ]
         ]
       },
       {
         "Density": 10,
         "Products": [
-          [ "M0000075", null ],
-          [ "AnySalt", null ],
-          [ "M0001629", 4.0 ],
-          [ "AnyBaseFluid", null ],
-          [ "M0004111", 6.0 ],
-          [ "M0005319", 8.0 ],
-          [ "M0009473", null ],
-          [ "M0002642", 2.0 ],
-          [ "M0002029", 4.0 ]
+          [
+            "FRESH WATER",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "VG-PLUS",
+            4.0
+          ],
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "Lime",
+            6.0
+          ],
+          [
+            "VERSAMUL",
+            8.0
+          ],
+          [
+            "M-I WATE",
+            null
+          ],
+          [
+            "VERSACOAT",
+            2.0
+          ],
+          [
+            "VERSATROL",
+            4.0
+          ]
         ]
       },
       {
         "Density": 12,
         "Products": [
-          [ "M0000075", null ],
-          [ "AnySalt", null ],
-          [ "M0001629", 3.0 ],
-          [ "AnyBaseFluid", null ],
-          [ "M0004111", 8.0 ],
-          [ "M0005319", 10.0 ],
-          [ "M0009473", null ],
-          [ "M0002642", 2.0 ],
-          [ "M0002029", 4.0 ]
+          [
+            "FRESH WATER",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "VG-PLUS",
+            3.0
+          ],
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "Lime",
+            8.0
+          ],
+          [
+            "VERSAMUL",
+            10.0
+          ],
+          [
+            "M-I WATE",
+            null
+          ],
+          [
+            "VERSACOAT",
+            2.0
+          ],
+          [
+            "VERSATROL",
+            4.0
+          ]
         ]
       },
       {
         "Density": 14,
         "Products": [
-          [ "M0000075", null ],
-          [ "AnySalt", null ],
-          [ "M0001629", 3.0 ],
-          [ "AnyBaseFluid", null ],
-          [ "M0004111", 8.0 ],
-          [ "M0005319", 10.0 ],
-          [ "M0009473", null ],
-          [ "M0002642", 2.0 ],
-          [ "M0002029", 4.0 ]
+          [
+            "FRESH WATER",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "VG-PLUS",
+            3.0
+          ],
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "Lime",
+            8.0
+          ],
+          [
+            "VERSAMUL",
+            10.0
+          ],
+          [
+            "M-I WATE",
+            null
+          ],
+          [
+            "VERSACOAT",
+            2.0
+          ],
+          [
+            "VERSATROL",
+            4.0
+          ]
         ]
       },
       {
         "Density": 16,
         "Products": [
-          [ "M0000075", null ],
-          [ "AnySalt", null ],
-          [ "M0001629", 1.5 ],
-          [ "AnyBaseFluid", null ],
-          [ "M0004111", 10.0 ],
-          [ "M0005319", 10.0 ],
-          [ "M0009473", null ],
-          [ "M0002642", 3.0 ],
-          [ "M0002029", 4.0 ]
+          [
+            "FRESH WATER",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "VG-PLUS",
+            1.5
+          ],
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "Lime",
+            10.0
+          ],
+          [
+            "VERSAMUL",
+            10.0
+          ],
+          [
+            "M-I WATE",
+            null
+          ],
+          [
+            "VERSACOAT",
+            3.0
+          ],
+          [
+            "VERSATROL",
+            4.0
+          ]
         ]
       }
     ]
   },
   {
     "FluidSystem": "versadril",
-    "BaseFluids": [ "diesel-2-red-dyed", "cutter-stock-d", "distillate-822", "diesel-fuel" ],
+    "BaseFluids": [
+      "diesel-2-red-dyed",
+      "cutter-stock-d",
+      "distillate-822",
+      "diesel-fuel"
+    ],
     "Recipes": [
       {
         "Density": 8.5,
         "Products": [
-          [ "M0000075", null ],
-          [ "AnySalt", null ],
-          [ "M0001629", 4.0 ],
-          [ "AnyBaseFluid", null ],
-          [ "M0004111", 6.0 ],
-          [ "M0005319", 8.0 ],
-          [ "M0009473", null ],
-          [ "M0002642", 2.0 ],
-          [ "M0002029", 4.0 ]
+          [
+            "FRESH WATER",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "VG-PLUS",
+            4.0
+          ],
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "Lime",
+            6.0
+          ],
+          [
+            "VERSAMUL",
+            8.0
+          ],
+          [
+            "M-I WATE",
+            null
+          ],
+          [
+            "VERSACOAT",
+            2.0
+          ],
+          [
+            "VERSATROL",
+            4.0
+          ]
         ]
       },
       {
         "Density": 10,
         "Products": [
-          [ "M0000075", null ],
-          [ "AnySalt", null ],
-          [ "M0001629", 4.0 ],
-          [ "AnyBaseFluid", null ],
-          [ "M0004111", 6.0 ],
-          [ "M0005319", 8.0 ],
-          [ "M0009473", null ],
-          [ "M0002642", 2.0 ],
-          [ "M0002029", 4.0 ]
+          [
+            "FRESH WATER",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "VG-PLUS",
+            4.0
+          ],
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "Lime",
+            6.0
+          ],
+          [
+            "VERSAMUL",
+            8.0
+          ],
+          [
+            "M-I WATE",
+            null
+          ],
+          [
+            "VERSACOAT",
+            2.0
+          ],
+          [
+            "VERSATROL",
+            4.0
+          ]
         ]
       },
       {
         "Density": 12,
         "Products": [
-          [ "M0000075", null ],
-          [ "AnySalt", null ],
-          [ "M0001629", 3.0 ],
-          [ "AnyBaseFluid", null ],
-          [ "M0004111", 8.0 ],
-          [ "M0005319", 10.0 ],
-          [ "M0009473", null ],
-          [ "M0002642", 2.0 ],
-          [ "M0002029", 4.0 ]
+          [
+            "FRESH WATER",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "VG-PLUS",
+            3.0
+          ],
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "Lime",
+            8.0
+          ],
+          [
+            "VERSAMUL",
+            10.0
+          ],
+          [
+            "M-I WATE",
+            null
+          ],
+          [
+            "VERSACOAT",
+            2.0
+          ],
+          [
+            "VERSATROL",
+            4.0
+          ]
         ]
       },
       {
         "Density": 14,
         "Products": [
-          [ "M0000075", null ],
-          [ "AnySalt", null ],
-          [ "M0001629", 3.0 ],
-          [ "AnyBaseFluid", null ],
-          [ "M0004111", 8.0 ],
-          [ "M0005319", 10.0 ],
-          [ "M0009473", null ],
-          [ "M0002642", 2.0 ],
-          [ "M0002029", 4.0 ]
+          [
+            "FRESH WATER",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "VG-PLUS",
+            3.0
+          ],
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "Lime",
+            8.0
+          ],
+          [
+            "VERSAMUL",
+            10.0
+          ],
+          [
+            "M-I WATE",
+            null
+          ],
+          [
+            "VERSACOAT",
+            2.0
+          ],
+          [
+            "VERSATROL",
+            4.0
+          ]
         ]
       },
       {
         "Density": 16,
         "Products": [
-          [ "M0000075", null ],
-          [ "AnySalt", null ],
-          [ "M0001629", 1.5 ],
-          [ "AnyBaseFluid", null ],
-          [ "M0004111", 10.0 ],
-          [ "M0005319", 10.0 ],
-          [ "M0009473", null ],
-          [ "M0002642", 3.0 ],
-          [ "M0002029", 4.0 ]
+          [
+            "FRESH WATER",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "VG-PLUS",
+            1.5
+          ],
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "Lime",
+            10.0
+          ],
+          [
+            "VERSAMUL",
+            10.0
+          ],
+          [
+            "M-I WATE",
+            null
+          ],
+          [
+            "VERSACOAT",
+            3.0
+          ],
+          [
+            "VERSATROL",
+            4.0
+          ]
         ]
       }
     ]
   },
   {
     "FluidSystem": "versatec",
-    "BaseFluids": [ "escaid-115", "escaid-110", "mineral-oil-lvt-200", "edc-95-11", "escaid-120", "edc-99-dw", "edc-diamond" ],
+    "BaseFluids": [
+      "escaid-115",
+      "escaid-110",
+      "mineral-oil-lvt-200",
+      "edc-95-11",
+      "escaid-120",
+      "edc-99-dw",
+      "edc-diamond"
+    ],
     "Recipes": [
       {
         "Density": 10,
         "Products": [
-          [ "M0000075", null ],
-          [ "AnySalt", null ],
-          [ "M0005186", 4.0 ],
-          [ "AnyBaseFluid", null ],
-          [ "M0009437", 8.0 ],
-          [ "M0019793", 12.0 ],
-          [ "M0009440", null ],
-          [ "M0001053", 2.0 ],
-          [ "M0013535", 4.0 ],
-          [ "M0001051", 2.0 ]
+          [
+            "FRESH WATER",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "TRUVIS",
+            4.0
+          ],
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "Lime",
+            8.0
+          ],
+          [
+            "ONE-MUL NS",
+            12.0
+          ],
+          [
+            "BARITE, API GRADE",
+            null
+          ],
+          [
+            "VERSAWET",
+            2.0
+          ],
+          [
+            "VERSATROL M",
+            4.0
+          ],
+          [
+            "VERSAMOD",
+            2.0
+          ]
         ]
       }
     ]
   },
   {
     "FluidSystem": "versapro",
-    "BaseFluids": [ "escaid-115", "escaid-110", "mineral-oil-lvt-200", "edc-95-11", "escaid-120", "edc-99-dw", "edc-diamond", "escaid-120-ula" ],
+    "BaseFluids": [
+      "escaid-115",
+      "escaid-110",
+      "mineral-oil-lvt-200",
+      "edc-95-11",
+      "escaid-120",
+      "edc-99-dw",
+      "edc-diamond",
+      "escaid-120-ula"
+    ],
     "Recipes": [
       {
         "Density": 10,
         "Products": [
-          [ "M0000075", null ],
-          [ "AnySalt", null ],
-          [ "M0005546", 3.5 ],
-          [ "AnyBaseFluid", null ],
-          [ "M0009437", 3.0 ],
-          [ "M0016040", 10.0 ],
-          [ "M0003047", null ]
+          [
+            "FRESH WATER",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "VG-SUPREME",
+            3.5
+          ],
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "Lime",
+            3.0
+          ],
+          [
+            "VERSAPRO P/S",
+            10.0
+          ],
+          [
+            "SAFE-CARB 40",
+            null
+          ]
         ]
       }
     ]
   },
   {
     "FluidSystem": "fazepro",
-    "BaseFluids": [ "escaid-115", "escaid-110", "mineral-oil-lvt-200", "edc-95-11", "escaid-120", "edc-99-dw", "edc-diamond", "escaid-120-ula" ],
+    "BaseFluids": [
+      "escaid-115",
+      "escaid-110",
+      "mineral-oil-lvt-200",
+      "edc-95-11",
+      "escaid-120",
+      "edc-99-dw",
+      "edc-diamond",
+      "escaid-120-ula"
+    ],
     "Recipes": [
       {
         "Density": 10,
         "Products": [
-          [ "M0000075", null ],
-          [ "AnySalt", null ],
-          [ "M0005546", 4.0 ],
-          [ "AnyBaseFluid", null ],
-          [ "M0004111", 4.0 ],
-          [ "M0005324", 10.0 ],
-          [ "M0004774", 4.0 ],
-          [ "M0003047", null ]
+          [
+            "FRESH WATER",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "VG-SUPREME",
+            4.0
+          ],
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "Lime",
+            4.0
+          ],
+          [
+            "FAZE-MUL",
+            10.0
+          ],
+          [
+            "FAZE-WET",
+            4.0
+          ],
+          [
+            "SAFE-CARB 40",
+            null
+          ]
         ]
       }
     ]
   },
   {
     "FluidSystem": "ob-warp",
-    "BaseFluids": [ "escaid-115", "escaid-110", "mineral-oil-lvt-200", "edc-95-11", "escaid-120", "edc-99-dw", "edc-diamond", "escaid-120-ula" ],
+    "BaseFluids": [
+      "escaid-115",
+      "escaid-110",
+      "mineral-oil-lvt-200",
+      "edc-95-11",
+      "escaid-120",
+      "edc-99-dw",
+      "edc-diamond",
+      "escaid-120-ula"
+    ],
     "Recipes": [
       {
         "Density": 10,
         "Products": [
-          [ "M0000075", null ],
-          [ "AnySalt", null ],
-          [ "M0005186", 4.0 ],
-          [ "AnyBaseFluid", null ],
-          [ "M0009437", 8.0 ],
-          [ "M0019793", 12.0 ],
-          [ "M0009862", null ],
-          [ "M0013535", 4.0 ]
+          [
+            "FRESH WATER",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "TRUVIS",
+            4.0
+          ],
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "Lime",
+            8.0
+          ],
+          [
+            "ONE-MUL NS",
+            12.0
+          ],
+          [
+            "WARP OB CONCENTRATE",
+            null
+          ],
+          [
+            "VERSATROL M",
+            4.0
+          ]
         ]
       }
     ]
   },
   {
     "FluidSystem": "warp-4200",
-    "BaseFluids": [ "synthetic-b", "io-c16-18", "io-c15-18" ],
+    "BaseFluids": [
+      "synthetic-b",
+      "io-c16-18",
+      "io-c15-18"
+    ],
     "Recipes": [
       {
         "Density": 14,
         "Products": [
-          [ "M0000075", null ],
-          [ "AnySalt", null ],
-          [ "M0005546", 2.0 ],
-          [ "AnyBaseFluid", null ],
-          [ "M0004111", 3.0 ],
-          [ "M0000832", 2.0 ],
-          [ "M0004359", 14.0 ],
-          [ "M0009526", null ]
+          [
+            "FRESH WATER",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "VG-SUPREME",
+            2.0
+          ],
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "Lime",
+            3.0
+          ],
+          [
+            "SUREWET",
+            2.0
+          ],
+          [
+            "SUREMUL",
+            14.0
+          ],
+          [
+            "WARP UF",
+            null
+          ]
         ]
       }
     ]
   },
   {
     "FluidSystem": "rhadiant",
-    "BaseFluids": [ "saraline-185v", "synthetic-b" ],
+    "BaseFluids": [
+      "saraline-185v",
+      "synthetic-b"
+    ],
     "Recipes": [
       {
         "Density": 10.5,
         "Products": [
-          [ "M0000075", null ],
-          [ "AnySalt", null ],
-          [ "M0004654", 5.0 ],
-          [ "AnyBaseFluid", null ],
-          [ "M0004111", 6.0 ],
-          [ "M0018036", 8.0 ],
-          [ "M0009473", null ],
-          [ "M0013060", 10.0 ],
-          [ "M0016108", 2.0 ]
+          [
+            "FRESH WATER",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "VERSAGEL HT",
+            5.0
+          ],
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "Lime",
+            6.0
+          ],
+          [
+            "MUL XT",
+            8.0
+          ],
+          [
+            "M-I WATE",
+            null
+          ],
+          [
+            "ONE-TROL HT",
+            10.0
+          ],
+          [
+            "ECOTROL HT",
+            2.0
+          ]
         ]
       }
     ]
   },
   {
     "FluidSystem": "megadril-sbm",
-    "BaseFluids": [ "bio-base-300", "hf-1000-solvent", "bio-base-365", "bio-base-360" ],
+    "BaseFluids": [
+      "bio-base-300",
+      "hf-1000-solvent",
+      "bio-base-365",
+      "bio-base-360"
+    ],
     "Recipes": [
       {
         "Density": 9,
         "Products": [
-          [ "M0000075", null ],
-          [ "AnySalt", null ],
-          [ "M0001629", 5.0 ],
-          [ "AnyBaseFluid", null ],
-          [ "M0004111", 4.0 ],
-          [ "M0014024", 6.0 ],
-          [ "M0009473", null ]
+          [
+            "FRESH WATER",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "VG-PLUS",
+            5.0
+          ],
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "Lime",
+            4.0
+          ],
+          [
+            "MEGAMUL (GBL082)",
+            6.0
+          ],
+          [
+            "M-I WATE",
+            null
+          ]
         ]
       },
       {
         "Density": 11,
         "Products": [
-          [ "M0000075", null ],
-          [ "AnySalt", null ],
-          [ "M0001629", 4.0 ],
-          [ "AnyBaseFluid", null ],
-          [ "M0004111", 5.0 ],
-          [ "M0014024", 7.0 ],
-          [ "M0009473", null ]
+          [
+            "FRESH WATER",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "VG-PLUS",
+            4.0
+          ],
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "Lime",
+            5.0
+          ],
+          [
+            "MEGAMUL (GBL082)",
+            7.0
+          ],
+          [
+            "M-I WATE",
+            null
+          ]
         ]
       },
       {
         "Density": 13,
         "Products": [
-          [ "M0000075", null ],
-          [ "AnySalt", null ],
-          [ "M0001629", 4.0 ],
-          [ "AnyBaseFluid", null ],
-          [ "M0004111", 6.0 ],
-          [ "M0014024", 8.0 ],
-          [ "M0009473", null ]
+          [
+            "FRESH WATER",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "VG-PLUS",
+            4.0
+          ],
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "Lime",
+            6.0
+          ],
+          [
+            "MEGAMUL (GBL082)",
+            8.0
+          ],
+          [
+            "M-I WATE",
+            null
+          ]
         ]
       },
       {
         "Density": 16,
         "Products": [
-          [ "M0000075", null ],
-          [ "AnySalt", null ],
-          [ "M0001629", 3.0 ],
-          [ "AnyBaseFluid", null ],
-          [ "M0004111", 6.0 ],
-          [ "M0014024", 9.0 ],
-          [ "M0009473", null ]
+          [
+            "FRESH WATER",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "VG-PLUS",
+            3.0
+          ],
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "Lime",
+            6.0
+          ],
+          [
+            "MEGAMUL (GBL082)",
+            9.0
+          ],
+          [
+            "M-I WATE",
+            null
+          ]
         ]
       }
     ]
   },
   {
     "FluidSystem": "megadril-obm",
-    "BaseFluids": [ "diesel-fuel", "escaid-110", "escaid-115", "cutter-stock-d", "distillate-822", "diesel-2-red-dyed" ],
+    "BaseFluids": [
+      "diesel-fuel",
+      "escaid-110",
+      "escaid-115",
+      "cutter-stock-d",
+      "distillate-822",
+      "diesel-2-red-dyed"
+    ],
     "Recipes": [
       {
         "Density": 9,
         "Products": [
-          [ "M0000075", null ],
-          [ "AnySalt", null ],
-          [ "M0001629", 5.0 ],
-          [ "AnyBaseFluid", null ],
-          [ "M0004111", 4.0 ],
-          [ "M0014024", 6.0 ],
-          [ "M0009473", null ]
+          [
+            "FRESH WATER",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "VG-PLUS",
+            5.0
+          ],
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "Lime",
+            4.0
+          ],
+          [
+            "MEGAMUL (GBL082)",
+            6.0
+          ],
+          [
+            "M-I WATE",
+            null
+          ]
         ]
       },
       {
         "Density": 11,
         "Products": [
-          [ "M0000075", null ],
-          [ "AnySalt", null ],
-          [ "M0001629", 4.0 ],
-          [ "AnyBaseFluid", null ],
-          [ "M0004111", 5.0 ],
-          [ "M0014024", 7.0 ],
-          [ "M0009473", null ]
+          [
+            "FRESH WATER",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "VG-PLUS",
+            4.0
+          ],
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "Lime",
+            5.0
+          ],
+          [
+            "MEGAMUL (GBL082)",
+            7.0
+          ],
+          [
+            "M-I WATE",
+            null
+          ]
         ]
       },
       {
         "Density": 13,
         "Products": [
-          [ "M0000075", null ],
-          [ "AnySalt", null ],
-          [ "M0001629", 4.0 ],
-          [ "AnyBaseFluid", null ],
-          [ "M0004111", 6.0 ],
-          [ "M0014024", 8.0 ],
-          [ "M0009473", null ]
+          [
+            "FRESH WATER",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "VG-PLUS",
+            4.0
+          ],
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "Lime",
+            6.0
+          ],
+          [
+            "MEGAMUL (GBL082)",
+            8.0
+          ],
+          [
+            "M-I WATE",
+            null
+          ]
         ]
       },
       {
         "Density": 16,
         "Products": [
-          [ "M0000075", null ],
-          [ "AnySalt", null ],
-          [ "M0001629", 3.0 ],
-          [ "AnyBaseFluid", null ],
-          [ "M0004111", 6.0 ],
-          [ "M0014024", 9.0 ],
-          [ "M0009473", null ]
+          [
+            "FRESH WATER",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "VG-PLUS",
+            3.0
+          ],
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "Lime",
+            6.0
+          ],
+          [
+            "MEGAMUL (GBL082)",
+            9.0
+          ],
+          [
+            "M-I WATE",
+            null
+          ]
         ]
       }
     ]
   },
   {
     "FluidSystem": "megadril-with-megadrive",
-    "BaseFluids": [ "diesel-fuel", "escaid-110", "escaid-115", "cutter-stock-d", "distillate-822", "diesel-2-red-dyed" ],
+    "BaseFluids": [
+      "diesel-fuel",
+      "escaid-110",
+      "escaid-115",
+      "cutter-stock-d",
+      "distillate-822",
+      "diesel-2-red-dyed"
+    ],
     "Recipes": [
       {
         "Density": 9,
         "Products": [
-          [ "M0000075", null ],
-          [ "AnySalt", null ],
-          [ "M0001629", 2.0 ],
-          [ "AnyBaseFluid", null ],
-          [ "M0004111", 5.0 ],
-          [ "M0024020", 3.0 ],
-          [ "M0024021", 1.0 ],
-          [ "M0009473", null ],
-          [ "M0013535", 1.5 ],
-          [ "M0002645", 2.4 ]
+          [
+            "FRESH WATER",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "VG-PLUS",
+            2.0
+          ],
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "Lime",
+            5.0
+          ],
+          [
+            "MEGADRIVE P",
+            3.0
+          ],
+          [
+            "MEGADRIVE S",
+            1.0
+          ],
+          [
+            "M-I WATE",
+            null
+          ],
+          [
+            "VERSATROL M",
+            1.5
+          ],
+          [
+            "VERSAMOD",
+            2.4
+          ]
         ]
       },
       {
         "Density": 13.5,
         "Products": [
-          [ "M0000075", null ],
-          [ "AnySalt", null ],
-          [ "M0001629", 5.0 ],
-          [ "AnyBaseFluid", null ],
-          [ "M0004111", 4.0 ],
-          [ "M0024020", 6.0 ],
-          [ "M0024021", 6.0 ],
-          [ "M0009473", null ],
-          [ "M0013535", 4.0 ],
-          [ "M0002645", 0.1 ]
+          [
+            "FRESH WATER",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "VG-PLUS",
+            5.0
+          ],
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "Lime",
+            4.0
+          ],
+          [
+            "MEGADRIVE P",
+            6.0
+          ],
+          [
+            "MEGADRIVE S",
+            6.0
+          ],
+          [
+            "M-I WATE",
+            null
+          ],
+          [
+            "VERSATROL M",
+            4.0
+          ],
+          [
+            "VERSAMOD",
+            0.1
+          ]
         ]
       }
     ]
   },
   {
     "FluidSystem": "freshwater",
-    "BaseFluids": [ "water" ],
+    "BaseFluids": [
+      "water"
+    ],
     "Recipes": [
       {
         "Density": 8.345,
         "Products": [
-          [ "AnyBaseFluid", null ],
-          [ "M0009473", null ],
-          [ "AnySalt", null ],
-          [ "AnySalt", null ],
-          [ "AnyBrine", null ],
-          [ "AnyBrine", null ]
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "M-I WATE",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ]
         ]
       }
     ]
   },
   {
     "FluidSystem": "brine",
-    "BaseFluids": [ "water" ],
+    "BaseFluids": [
+      "water"
+    ],
     "Recipes": [
       {
         "Density": 10,
         "Products": [
-          [ "M0000075", null ],
-          [ "M0004013", null ]
+          [
+            "FRESH WATER",
+            null
+          ],
+          [
+            "SODIUM CHLORIDE BRINE",
+            null
+          ]
         ]
       },
       {
         "Density": 9.7,
         "Products": [
-          [ "M0000075", null ],
-          [ "M0001665", null ]
+          [
+            "FRESH WATER",
+            null
+          ],
+          [
+            "POTASSIUM CHLORIDE BRINE",
+            null
+          ]
         ]
       },
       {
         "Density": 11.8,
         "Products": [
-          [ "M0000075", null ],
-          [ "M0000401", null ]
+          [
+            "FRESH WATER",
+            null
+          ],
+          [
+            "CALCIUM CHLORIDE BRINE",
+            null
+          ]
         ]
       },
       {
         "Density": 15.3,
         "Products": [
-          [ "M0000075", null ],
-          [ "M0016480", null ]
+          [
+            "FRESH WATER",
+            null
+          ],
+          [
+            "CALCIUM BROMIDE BRINE",
+            null
+          ]
         ]
       },
       {
         "Density": 11.1,
         "Products": [
-          [ "M0000075", null ],
-          [ "M0015775", null ]
+          [
+            "FRESH WATER",
+            null
+          ],
+          [
+            "SODIUM FORMATE BRINE",
+            null
+          ]
         ]
       },
       {
         "Density": 13.2,
         "Products": [
-          [ "M0000075", null ],
-          [ "M0004016", null ]
+          [
+            "FRESH WATER",
+            null
+          ],
+          [
+            "POTASSIUM FORMATE LIQUID",
+            null
+          ]
         ]
       },
       {
         "Density": 13.1,
         "Products": [
-          [ "M0000075", null ],
-          [ "M0013926", null ]
+          [
+            "FRESH WATER",
+            null
+          ],
+          [
+            "POTASSIUM FORMATE LIQUID",
+            null
+          ]
         ]
       },
       {
         "Density": 18.33,
         "Products": [
-          [ "M0000075", null ],
-          [ "M0009807", null ]
+          [
+            "FRESH WATER",
+            null
+          ],
+          [
+            "CESIUM/POTASSIUM FORMATE",
+            null
+          ]
         ]
       },
       {
         "Density": 12.7,
         "Products": [
-          [ "M0000075", null ],
-          [ "M0023397", null ]
+          [
+            "FRESH WATER",
+            null
+          ],
+          [
+            "SODIUM BROMIDE BRINE",
+            null
+          ]
         ]
       },
       {
         "Density": 20.5,
         "Products": [
-          [ "M0000075", null ],
-          [ "103049582", null ]
+          [
+            "FRESH WATER",
+            null
+          ],
+          [
+            "103049582",
+            null
+          ]
         ]
       }
     ]
   },
   {
     "FluidSystem": "ultradril",
-    "BaseFluids": [ "water", "seawater" ],
+    "BaseFluids": [
+      "water",
+      "seawater"
+    ],
     "Recipes": [
       {
         "Density": 10,
         "Products": [
-          [ "AnyBaseFluid", null ],
-          [ "AnySalt", null ],
-          [ "AnySalt", null ],
-          [ "AnyBrine", null ],
-          [ "AnyBrine", null ],
-          [ "M0003695", 10.5 ],
-          [ "M0004191", 2.5 ],
-          [ "M0002205", 2.0 ],
-          [ "M0002973", 1.25 ],
-          [ "M0004190", 8.9 ],
-          [ "M0009473", null ]
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "ULTRAHIB",
+            10.5
+          ],
+          [
+            "ULTRACAP",
+            2.5
+          ],
+          [
+            "POLYPAC UL",
+            2.0
+          ],
+          [
+            "DUO-VIS",
+            1.25
+          ],
+          [
+            "ULTRAFREE",
+            8.9
+          ],
+          [
+            "M-I WATE",
+            null
+          ]
         ]
       },
       {
         "Density": 12,
         "Products": [
-          [ "AnyBaseFluid", null ],
-          [ "AnySalt", null ],
-          [ "AnySalt", null ],
-          [ "AnyBrine", null ],
-          [ "AnyBrine", null ],
-          [ "M0003695", 10.5 ],
-          [ "M0004191", 2.0 ],
-          [ "M0002205", 2.0 ],
-          [ "M0002973", 0.75 ],
-          [ "M0004190", 8.9 ],
-          [ "M0009473", null ]
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "ULTRAHIB",
+            10.5
+          ],
+          [
+            "ULTRACAP",
+            2.0
+          ],
+          [
+            "POLYPAC UL",
+            2.0
+          ],
+          [
+            "DUO-VIS",
+            0.75
+          ],
+          [
+            "ULTRAFREE",
+            8.9
+          ],
+          [
+            "M-I WATE",
+            null
+          ]
         ]
       },
       {
         "Density": 14,
         "Products": [
-          [ "AnyBaseFluid", null ],
-          [ "AnySalt", null ],
-          [ "AnySalt", null ],
-          [ "AnyBrine", null ],
-          [ "AnyBrine", null ],
-          [ "M0003695", 10.5 ],
-          [ "M0004191", 1.25 ],
-          [ "M0002205", 2.0 ],
-          [ "M0002973", 0.5 ],
-          [ "M0004190", 8.9 ],
-          [ "M0009473", null ]
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "ULTRAHIB",
+            10.5
+          ],
+          [
+            "ULTRACAP",
+            1.25
+          ],
+          [
+            "POLYPAC UL",
+            2.0
+          ],
+          [
+            "DUO-VIS",
+            0.5
+          ],
+          [
+            "ULTRAFREE",
+            8.9
+          ],
+          [
+            "M-I WATE",
+            null
+          ]
         ]
       },
       {
         "Density": 16,
         "Products": [
-          [ "AnyBaseFluid", null ],
-          [ "AnySalt", null ],
-          [ "AnySalt", null ],
-          [ "AnyBrine", null ],
-          [ "AnyBrine", null ],
-          [ "M0003695", 10.5 ],
-          [ "M0004191", 0.75 ],
-          [ "M0002205", 2.0 ],
-          [ "M0002973", 0.25 ],
-          [ "M0004190", 8.9 ],
-          [ "M0009473", null ]
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "ULTRAHIB",
+            10.5
+          ],
+          [
+            "ULTRACAP",
+            0.75
+          ],
+          [
+            "POLYPAC UL",
+            2.0
+          ],
+          [
+            "DUO-VIS",
+            0.25
+          ],
+          [
+            "ULTRAFREE",
+            8.9
+          ],
+          [
+            "M-I WATE",
+            null
+          ]
         ]
       }
     ]
   },
   {
     "FluidSystem": "dispersed-wbm",
-    "BaseFluids": [ "water", "seawater" ],
+    "BaseFluids": [
+      "water",
+      "seawater"
+    ],
     "Recipes": [
       {
         "Density": 9.5,
         "Products": [
-          [ "AnyBaseFluid", null ],
-          [ "AnySalt", null ],
-          [ "AnySalt", null ],
-          [ "AnyBrine", null ],
-          [ "AnyBrine", null ],
-          [ "M0004024", 0.25 ],
-          [ "M0001112", 7 ],
-          [ "M0002973", 0.25 ],
-          [ "M0002205", 2 ],
-          [ "M0001097", 1.5 ],
-          [ "M0000300", 15 ],
-          [ "M0009473", null ]
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "CAUSTIC SODA",
+            0.25
+          ],
+          [
+            "TANNATHIN",
+            7
+          ],
+          [
+            "DUO-VIS",
+            0.25
+          ],
+          [
+            "POLYPAC UL",
+            2
+          ],
+          [
+            "CHROME-FREE DESCO II",
+            1.5
+          ],
+          [
+            "M-I GEL",
+            15
+          ],
+          [
+            "M-I WATE",
+            null
+          ]
         ]
       },
       {
         "Density": 10.5,
         "Products": [
-          [ "AnyBaseFluid", null ],
-          [ "AnySalt", null ],
-          [ "AnySalt", null ],
-          [ "AnyBrine", null ],
-          [ "AnyBrine", null ],
-          [ "M0004024", 0.25 ],
-          [ "M0001112", 7 ],
-          [ "M0002973", 0.25 ],
-          [ "M0002205", 2 ],
-          [ "M0001097", 1.5 ],
-          [ "M0000300", 15 ],
-          [ "M0009473", null ]
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "CAUSTIC SODA",
+            0.25
+          ],
+          [
+            "TANNATHIN",
+            7
+          ],
+          [
+            "DUO-VIS",
+            0.25
+          ],
+          [
+            "POLYPAC UL",
+            2
+          ],
+          [
+            "CHROME-FREE DESCO II",
+            1.5
+          ],
+          [
+            "M-I GEL",
+            15
+          ],
+          [
+            "M-I WATE",
+            null
+          ]
         ]
       },
       {
         "Density": 12.5,
         "Products": [
-          [ "AnyBaseFluid", null ],
-          [ "AnySalt", null ],
-          [ "AnySalt", null ],
-          [ "AnyBrine", null ],
-          [ "AnyBrine", null ],
-          [ "M0004024", 0.25 ],
-          [ "M0001112", 7 ],
-          [ "M0002973", 0.25 ],
-          [ "M0002205", 2 ],
-          [ "M0001097", 1.5 ],
-          [ "M0000300", 15 ],
-          [ "M0009473", null ]
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "CAUSTIC SODA",
+            0.25
+          ],
+          [
+            "TANNATHIN",
+            7
+          ],
+          [
+            "DUO-VIS",
+            0.25
+          ],
+          [
+            "POLYPAC UL",
+            2
+          ],
+          [
+            "CHROME-FREE DESCO II",
+            1.5
+          ],
+          [
+            "M-I GEL",
+            15
+          ],
+          [
+            "M-I WATE",
+            null
+          ]
         ]
       },
       {
         "Density": 14.5,
         "Products": [
-          [ "AnyBaseFluid", null ],
-          [ "AnySalt", null ],
-          [ "AnySalt", null ],
-          [ "AnyBrine", null ],
-          [ "AnyBrine", null ],
-          [ "M0004024", 0.25 ],
-          [ "M0001112", 7 ],
-          [ "M0002973", 0.25 ],
-          [ "M0002205", 2 ],
-          [ "M0001097", 1.5 ],
-          [ "M0000300", 15 ],
-          [ "M0009473", null ]
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "CAUSTIC SODA",
+            0.25
+          ],
+          [
+            "TANNATHIN",
+            7
+          ],
+          [
+            "DUO-VIS",
+            0.25
+          ],
+          [
+            "POLYPAC UL",
+            2
+          ],
+          [
+            "CHROME-FREE DESCO II",
+            1.5
+          ],
+          [
+            "M-I GEL",
+            15
+          ],
+          [
+            "M-I WATE",
+            null
+          ]
         ]
       }
     ]
   },
   {
     "FluidSystem": "low-solids-non-dispersed",
-    "BaseFluids": [ "water", "seawater" ],
+    "BaseFluids": [
+      "water",
+      "seawater"
+    ],
     "Recipes": [
       {
         "Density": 10.5,
         "Products": [
-          [ "AnyBaseFluid", null ],
-          [ "AnySalt", null ],
-          [ "AnySalt", null ],
-          [ "AnyBrine", null ],
-          [ "AnyBrine", null ],
-          [ "M0004024", 0.5 ],
-          [ "M0000300", 8 ],
-          [ "M0002973", 0.5 ],
-          [ "M0002204", 2 ],
-          [ "M0003657", 1 ],
-          [ "M0009473", null ]
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "CAUSTIC SODA",
+            0.5
+          ],
+          [
+            "M-I GEL",
+            8
+          ],
+          [
+            "DUO-VIS",
+            0.5
+          ],
+          [
+            "POLYPAC R",
+            2
+          ],
+          [
+            "POLY-PLUS",
+            1
+          ],
+          [
+            "M-I WATE",
+            null
+          ]
         ]
       }
     ]
   },
   {
     "FluidSystem": "spud-mud",
-    "BaseFluids": [ "water", "seawater" ],
+    "BaseFluids": [
+      "water",
+      "seawater"
+    ],
     "Recipes": [
       {
         "Density": 10,
         "Products": [
-          [ "AnyBaseFluid", null ],
-          [ "AnySalt", null ],
-          [ "AnySalt", null ],
-          [ "AnyBrine", null ],
-          [ "AnyBrine", null ],
-          [ "M0002510", 3 ],
-          [ "M0002973", 0.75 ],
-          [ "M0002205", 2 ],
-          [ "M0001452", 8 ],
-          [ "M0009473", null ]
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "IDCAP D",
+            3
+          ],
+          [
+            "DUO-VIS",
+            0.75
+          ],
+          [
+            "POLYPAC UL",
+            2
+          ],
+          [
+            "KLA-GARD",
+            8
+          ],
+          [
+            "M-I WATE",
+            null
+          ]
         ]
       }
     ]
   },
   {
     "FluidSystem": "envirotherm-nt",
-    "BaseFluids": [ "water", "seawater" ],
+    "BaseFluids": [
+      "water",
+      "seawater"
+    ],
     "Recipes": [
       {
         "Density": 12,
         "Products": [
-          [ "AnyBaseFluid", null ],
-          [ "AnySalt", null ],
-          [ "AnySalt", null ],
-          [ "AnyBrine", null ],
-          [ "AnyBrine", null ],
-          [ "M0004182", 0.25 ],
-          [ "M0001950", 5 ],
-          [ "M0004024", 1.15 ],
-          [ "M0013001", 2 ],
-          [ "M0012396", 3 ],
-          [ "M0017436", 8 ],
-          [ "M0009473", null ],
-          [ "M0014119", 10 ]
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "SODA ASH",
+            0.25
+          ],
+          [
+            "M-I GEL SUPREME",
+            5
+          ],
+          [
+            "CAUSTIC SODA",
+            1.15
+          ],
+          [
+            "CALOTHIN",
+            2
+          ],
+          [
+            "CALOVIS FL",
+            3
+          ],
+          [
+            "CALOSPERSE",
+            8
+          ],
+          [
+            "M-I WATE",
+            null
+          ],
+          [
+            "POROSEAL",
+            10
+          ]
         ]
       },
       {
         "Density": 13,
         "Products": [
-          [ "AnyBaseFluid", null ],
-          [ "AnySalt", null ],
-          [ "AnySalt", null ],
-          [ "AnyBrine", null ],
-          [ "AnyBrine", null ],
-          [ "M0004182", 0.25 ],
-          [ "M0001950", 5 ],
-          [ "M0004024", 1.15 ],
-          [ "M0013001", 2 ],
-          [ "M0012396", 2.75 ],
-          [ "M0017436", 9, 9 ],
-          [ "M0009473", null ],
-          [ "M0014119", 10 ]
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "SODA ASH",
+            0.25
+          ],
+          [
+            "M-I GEL SUPREME",
+            5
+          ],
+          [
+            "CAUSTIC SODA",
+            1.15
+          ],
+          [
+            "CALOTHIN",
+            2
+          ],
+          [
+            "CALOVIS FL",
+            2.75
+          ],
+          [
+            "CALOSPERSE",
+            9,
+            9
+          ],
+          [
+            "M-I WATE",
+            null
+          ],
+          [
+            "POROSEAL",
+            10
+          ]
         ]
       },
       {
         "Density": 14,
         "Products": [
-          [ "AnyBaseFluid", null ],
-          [ "AnySalt", null ],
-          [ "AnySalt", null ],
-          [ "AnyBrine", null ],
-          [ "AnyBrine", null ],
-          [ "M0004182", 0.25 ],
-          [ "M0001950", 4.5 ],
-          [ "M0004024", 1.15 ],
-          [ "M0013001", 2 ],
-          [ "M0012396", 2.5 ],
-          [ "M0017436", 10 ],
-          [ "M0009473", null ],
-          [ "M0014119", 10 ]
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "SODA ASH",
+            0.25
+          ],
+          [
+            "M-I GEL SUPREME",
+            4.5
+          ],
+          [
+            "CAUSTIC SODA",
+            1.15
+          ],
+          [
+            "CALOTHIN",
+            2
+          ],
+          [
+            "CALOVIS FL",
+            2.5
+          ],
+          [
+            "CALOSPERSE",
+            10
+          ],
+          [
+            "M-I WATE",
+            null
+          ],
+          [
+            "POROSEAL",
+            10
+          ]
         ]
       },
       {
         "Density": 15,
         "Products": [
-          [ "AnyBaseFluid", null ],
-          [ "AnySalt", null ],
-          [ "AnySalt", null ],
-          [ "AnyBrine", null ],
-          [ "AnyBrine", null ],
-          [ "M0004182", 0.25 ],
-          [ "M0001950", 4, 4 ],
-          [ "M0004024", 1.15 ],
-          [ "M0013001", 2 ],
-          [ "M0012396", 2.25 ],
-          [ "M0017436", 11 ],
-          [ "M0009473", null ],
-          [ "M0014119", 10 ]
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "SODA ASH",
+            0.25
+          ],
+          [
+            "M-I GEL SUPREME",
+            4,
+            4
+          ],
+          [
+            "CAUSTIC SODA",
+            1.15
+          ],
+          [
+            "CALOTHIN",
+            2
+          ],
+          [
+            "CALOVIS FL",
+            2.25
+          ],
+          [
+            "CALOSPERSE",
+            11
+          ],
+          [
+            "M-I WATE",
+            null
+          ],
+          [
+            "POROSEAL",
+            10
+          ]
         ]
       },
       {
         "Density": 16,
         "Products": [
-          [ "AnyBaseFluid", null ],
-          [ "AnySalt", null ],
-          [ "AnySalt", null ],
-          [ "AnyBrine", null ],
-          [ "AnyBrine", null ],
-          [ "M0004182", 0.25 ],
-          [ "M0001950", 3.5 ],
-          [ "M0004024", 1.15 ],
-          [ "M0013001", 2 ],
-          [ "M0012396", 2 ],
-          [ "M0017436", 12 ],
-          [ "M0009473", null ],
-          [ "M0014119", 10 ]
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "SODA ASH",
+            0.25
+          ],
+          [
+            "M-I GEL SUPREME",
+            3.5
+          ],
+          [
+            "CAUSTIC SODA",
+            1.15
+          ],
+          [
+            "CALOTHIN",
+            2
+          ],
+          [
+            "CALOVIS FL",
+            2
+          ],
+          [
+            "CALOSPERSE",
+            12
+          ],
+          [
+            "M-I WATE",
+            null
+          ],
+          [
+            "POROSEAL",
+            10
+          ]
         ]
       },
       {
         "Density": 17,
         "Products": [
-          [ "AnyBaseFluid", null ],
-          [ "AnySalt", null ],
-          [ "AnySalt", null ],
-          [ "AnyBrine", null ],
-          [ "AnyBrine", null ],
-          [ "M0004182", 0.25 ],
-          [ "M0001950", 3 ],
-          [ "M0004024", 1.15 ],
-          [ "M0013001", 2 ],
-          [ "M0012396", 1.75 ],
-          [ "M0017436", 12 ],
-          [ "M0009473", null ],
-          [ "M0014119", 10 ]
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "SODA ASH",
+            0.25
+          ],
+          [
+            "M-I GEL SUPREME",
+            3
+          ],
+          [
+            "CAUSTIC SODA",
+            1.15
+          ],
+          [
+            "CALOTHIN",
+            2
+          ],
+          [
+            "CALOVIS FL",
+            1.75
+          ],
+          [
+            "CALOSPERSE",
+            12
+          ],
+          [
+            "M-I WATE",
+            null
+          ],
+          [
+            "POROSEAL",
+            10
+          ]
         ]
       },
       {
         "Density": 18,
         "Products": [
-          [ "AnyBaseFluid", null ],
-          [ "AnySalt", null ],
-          [ "AnySalt", null ],
-          [ "AnyBrine", null ],
-          [ "AnyBrine", null ],
-          [ "M0004182", 0.25 ],
-          [ "M0001950", 2.5 ],
-          [ "M0004024", 1.15 ],
-          [ "M0013001", 2 ],
-          [ "M0012396", 1.5 ],
-          [ "M0017436", 12 ],
-          [ "M0009473", null ],
-          [ "M0014119", 10 ]
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "SODA ASH",
+            0.25
+          ],
+          [
+            "M-I GEL SUPREME",
+            2.5
+          ],
+          [
+            "CAUSTIC SODA",
+            1.15
+          ],
+          [
+            "CALOTHIN",
+            2
+          ],
+          [
+            "CALOVIS FL",
+            1.5
+          ],
+          [
+            "CALOSPERSE",
+            12
+          ],
+          [
+            "M-I WATE",
+            null
+          ],
+          [
+            "POROSEAL",
+            10
+          ]
         ]
       }
     ]
   },
   {
     "FluidSystem": "kla-shield",
-    "BaseFluids": [ "water", "seawater" ],
+    "BaseFluids": [
+      "water",
+      "seawater"
+    ],
     "Recipes": [
       {
         "Density": 10,
         "Products": [
-          [ "AnyBaseFluid", null ],
-          [ "AnySalt", null ],
-          [ "AnySalt", null ],
-          [ "AnyBrine", null ],
-          [ "AnyBrine", null ],
-          [ "M0002510", 3 ],
-          [ "M0002973", 0.75 ],
-          [ "M0002205", 2 ],
-          [ "M0001452", 8 ],
-          [ "M0009473", null ]
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "IDCAP D",
+            3
+          ],
+          [
+            "DUO-VIS",
+            0.75
+          ],
+          [
+            "POLYPAC UL",
+            2
+          ],
+          [
+            "KLA-GARD",
+            8
+          ],
+          [
+            "M-I WATE",
+            null
+          ]
         ]
       }
     ]
   },
   {
     "FluidSystem": "hydraglyde",
-    "BaseFluids": [ "water", "seawater" ],
+    "BaseFluids": [
+      "water",
+      "seawater"
+    ],
     "Recipes": [
       {
         "Density": 10.5,
         "Products": [
-          [ "AnyBaseFluid", null ],
-          [ "AnySalt", null ],
-          [ "AnySalt", null ],
-          [ "AnyBrine", null ],
-          [ "AnyBrine", null ],
-          [ "M0004024", 0.5 ],
-          [ "M0002973", 1 ],
-          [ "M0002205", 2 ],
-          [ "M0023333", 2 ],
-          [ "M0023690", 5.25 ],
-          [ "M0023691", 10 ],
-          [ "M0008174", 0.5 ],
-          [ "M0009473", null ]
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "CAUSTIC SODA",
+            0.5
+          ],
+          [
+            "DUO-VIS",
+            1
+          ],
+          [
+            "POLYPAC UL",
+            2
+          ],
+          [
+            "HYDRACAP",
+            2
+          ],
+          [
+            "HYDRAHIB",
+            5.25
+          ],
+          [
+            "HYDRASPEED",
+            10
+          ],
+          [
+            "BUSAN 1060",
+            0.5
+          ],
+          [
+            "M-I WATE",
+            null
+          ]
         ]
       }
     ]
   },
   {
     "FluidSystem": "hydraglyde-optima",
-    "BaseFluids": [ "water", "seawater" ],
+    "BaseFluids": [
+      "water",
+      "seawater"
+    ],
     "Recipes": [
       {
         "Density": 10.5,
         "Products": [
-          [ "AnyBaseFluid", null ],
-          [ "AnySalt", null ],
-          [ "AnySalt", null ],
-          [ "AnyBrine", null ],
-          [ "AnyBrine", null ],
-          [ "M0004024", 0.5 ],
-          [ "M0005294", 1 ],
-          [ "M0004885", 2 ],
-          [ "M0021754", 16 ],
-          [ "M0019089", 20 ],
-          [ "M0000284", 7 ],
-          [ "M0009440", null ]
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "CAUSTIC SODA",
+            0.5
+          ],
+          [
+            "DUO-TEC NS",
+            1
+          ],
+          [
+            "POLYPAC ELV",
+            2
+          ],
+          [
+            "KLA-HIB NS",
+            16
+          ],
+          [
+            "ACRETE-BLOK",
+            20
+          ],
+          [
+            "TROL FL",
+            7
+          ],
+          [
+            "BARITE, API GRADE",
+            null
+          ]
         ]
       }
     ]
   },
   {
     "FluidSystem": "generic-land-sbm",
-    "BaseFluids": [ "synthetic-b" ],
+    "BaseFluids": [
+      "synthetic-b"
+    ],
     "Recipes": [
       {
         "Density": 9,
         "Products": [
-          [ "M0000075", null ],
-          [ "AnySalt", null ],
-          [ "M0007742", 4.0 ],
-          [ "AnyBaseFluid", null ],
-          [ "M0004111", 6.0 ],
-          [ "M0007963", 10.0 ],
-          [ "M0009440", null ],
-          [ "M0006778", 4.0 ]
+          [
+            "FRESH WATER",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "FED ORGANO CLAY",
+            4.0
+          ],
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "Lime",
+            6.0
+          ],
+          [
+            "FEDMUL",
+            10.0
+          ],
+          [
+            "BARITE, API GRADE",
+            null
+          ],
+          [
+            "GILSONITE",
+            4.0
+          ]
         ]
       }
     ]
   },
   {
     "FluidSystem": "generic-obm",
-    "BaseFluids": [ "diesel-fuel" ],
+    "BaseFluids": [
+      "diesel-fuel"
+    ],
     "Recipes": [
       {
         "Density": 9,
         "Products": [
-          [ "M0000075", null ],
-          [ "AnySalt", null ],
-          [ "M0007742", 4.0 ],
-          [ "AnyBaseFluid", null ],
-          [ "M0004111", 6.0 ],
-          [ "M0007963", 10.0 ],
-          [ "M0009440", null ],
-          [ "M0006778", 4.0 ]
+          [
+            "FRESH WATER",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "FED ORGANO CLAY",
+            4.0
+          ],
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "Lime",
+            6.0
+          ],
+          [
+            "FEDMUL",
+            10.0
+          ],
+          [
+            "BARITE, API GRADE",
+            null
+          ],
+          [
+            "GILSONITE",
+            4.0
+          ]
         ]
       }
     ]
   },
   {
     "FluidSystem": "generic-dispersed",
-    "BaseFluids": [ "water", "seawater" ],
+    "BaseFluids": [
+      "water",
+      "seawater"
+    ],
     "Recipes": [
       {
         "Density": 9.5,
         "Products": [
-          [ "AnyBaseFluid", null ],
-          [ "AnySalt", null ],
-          [ "AnySalt", null ],
-          [ "AnyBrine", null ],
-          [ "AnyBrine", null ],
-          [ "M0004024", 0.25 ],
-          [ "M0001771", 7 ],
-          [ "M0017490", 0.25 ],
-          [ "M0006152", 2 ],
-          [ "M0001098", 1.5 ],
-          [ "M0000255", 15.0 ],
-          [ "M0009440", null ]
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "CAUSTIC SODA",
+            0.25
+          ],
+          [
+            "LIGNITE",
+            7
+          ],
+          [
+            "XANTHAN GUM",
+            0.25
+          ],
+          [
+            "CMC PURE LV",
+            2
+          ],
+          [
+            "LIGNOSULFONATE CF",
+            1.5
+          ],
+          [
+            "FEDERAL BENTONITE",
+            15.0
+          ],
+          [
+            "BARITE, API GRADE",
+            null
+          ]
         ]
       }
     ]
   },
   {
     "FluidSystem": "generic-lsnd",
-    "BaseFluids": [ "water", "seawater" ],
+    "BaseFluids": [
+      "water",
+      "seawater"
+    ],
     "Recipes": [
       {
         "Density": 10.5,
         "Products": [
-          [ "AnyBaseFluid", null ],
-          [ "AnySalt", null ],
-          [ "AnySalt", null ],
-          [ "AnyBrine", null ],
-          [ "AnyBrine", null ],
-          [ "M0004024", 0.5 ],
-          [ "M0000255", 20.0 ],
-          [ "M0017490", 0.5 ],
-          [ "M0006152", 2 ],
-          [ "M0003657", 1 ],
-          [ "M0009440", null ]
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "CAUSTIC SODA",
+            0.5
+          ],
+          [
+            "FEDERAL BENTONITE",
+            20.0
+          ],
+          [
+            "XANTHAN GUM",
+            0.5
+          ],
+          [
+            "CMC PURE LV",
+            2
+          ],
+          [
+            "POLY-PLUS",
+            1
+          ],
+          [
+            "BARITE, API GRADE",
+            null
+          ]
         ]
       }
     ]
   },
   {
     "FluidSystem": "generic-spud-mud",
-    "BaseFluids": [ "water", "seawater" ],
+    "BaseFluids": [
+      "water",
+      "seawater"
+    ],
     "Recipes": [
       {
         "Density": 10,
         "Products": [
-          [ "AnyBaseFluid", null ],
-          [ "AnySalt", null ],
-          [ "AnySalt", null ],
-          [ "AnyBrine", null ],
-          [ "AnyBrine", null ],
-          [ "M0009440", null ],
-          [ "M0004024", 0.5 ],
-          [ "M0000255", 20.0 ]
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "BARITE, API GRADE",
+            null
+          ],
+          [
+            "CAUSTIC SODA",
+            0.5
+          ],
+          [
+            "FEDERAL BENTONITE",
+            20.0
+          ]
         ]
       }
     ]
   },
   {
     "FluidSystem": "paradril-sbm",
-    "BaseFluids": [ "puredrill-ia-35-lv" ],
+    "BaseFluids": [
+      "puredrill-ia-35-lv"
+    ],
     "Recipes": [
       {
         "Density": 10.8485,
         "Products": [
-          [ "M0000075", null ],
-          [ "AnySalt", null ],
-          [ "M0005186", 6.1 ],
-          [ "AnyBaseFluid", null ],
-          [ "M0004111", 6.1 ],
-          [ "M0004359", 12.6 ],
-          [ "M0009473", null ],
-          [ "M0000832", 4.5 ],
-          [ "M0000879", 10.5 ],
-          [ "M0002652", 10.5 ]
+          [
+            "FRESH WATER",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "TRUVIS",
+            6.1
+          ],
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "Lime",
+            6.1
+          ],
+          [
+            "SUREMUL",
+            12.6
+          ],
+          [
+            "M-I WATE",
+            null
+          ],
+          [
+            "SUREWET",
+            4.5
+          ],
+          [
+            "SAFE-CARB 20",
+            10.5
+          ],
+          [
+            "SAFE-CARB 40",
+            10.5
+          ]
         ]
       }
     ]
   },
   {
     "FluidSystem": "flopro-nt",
-    "BaseFluids": [ "water", "seawater" ],
+    "BaseFluids": [
+      "water",
+      "seawater"
+    ],
     "Recipes": [
       {
         "Density": 1.0,
         "Products": [
-          [ "AnyBaseFluid", null ],
-          [ "AnySalt", null ],
-          [ "AnySalt", null ],
-          [ "AnyBrine", null ],
-          [ "AnyBrine", null ],
-          [ "M0004182", 1.0 ],
-          [ "M0002198", 12.0 ],
-          [ "M0001674", 1.0 ],
-          [ "M0003047", null ]
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "SODA ASH",
+            1.0
+          ],
+          [
+            "FLO-TROL",
+            12.0
+          ],
+          [
+            "FLO-VIS PLUS",
+            1.0
+          ],
+          [
+            "SAFE-CARB 40",
+            null
+          ]
         ]
       }
     ]
   },
   {
     "FluidSystem": "fluxdril",
-    "BaseFluids": [ "water" ],
+    "BaseFluids": [
+      "water"
+    ],
     "Recipes": [
       {
         "Density": 0.0,
         "Products": [
-          [ "M0000075", null ],
-          [ "AnyBrine", null ],
-          [ "M0004111", 1.2 ],
-          [ "M0002973", 1.5 ],
-          [ "103019810", 6.0 ],
-          [ "M0023690", 30.0 ],
-          [ "M0003620", 3.0 ],
-          [ "M0004926", 1.0 ],
-          [ "M0009473", null ],
-          [ "M0008174", 0.5 ],
-          [ "M0003615", 0.2 ],
-          [ "M0004030", null ]
+          [
+            "FRESH WATER",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "Lime",
+            1.2
+          ],
+          [
+            "DUO-VIS",
+            1.5
+          ],
+          [
+            "103019810",
+            6.0
+          ],
+          [
+            "HYDRAHIB",
+            30.0
+          ],
+          [
+            "CONQOR 303 A",
+            3.0
+          ],
+          [
+            "SAFE-SCAV HS",
+            1.0
+          ],
+          [
+            "M-I WATE",
+            null
+          ],
+          [
+            "BUSAN 1060",
+            0.5
+          ],
+          [
+            "DEFOAM-X",
+            0.2
+          ],
+          [
+            "DIESEL FUEL",
+            null
+          ]
         ]
       }
     ]
   },
   {
     "FluidSystem": "rheguard-prime-obm",
-    "BaseFluids": [ "escaid-120-ula", "escaid-120", "edc-99-dw-cm", "sipdrill-2-0" ],
+    "BaseFluids": [
+      "escaid-120-ula",
+      "escaid-120",
+      "edc-99-dw-cm",
+      "sipdrill-2-0"
+    ],
     "Recipes": [
       {
         "Density": 0.0,
         "Products": [
-          [ "M0000075", null ],
-          [ "AnySalt", null ],
-          [ "AnyBaseFluid", null ],
-          [ "M0005546", 2.0 ],
-          [ "M0004111", 3.0 ],
-          [ "M0019793", 12.0 ],
-          [ "M0024290", null ],
-          [ "M0002649", 3.5 ],
-          [ "M0013535", 7.0 ],
-          [ "103146834", 1.0 ],
-          [ "M0002645", 1.0 ]
+          [
+            "FRESH WATER",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "VG-SUPREME",
+            2.0
+          ],
+          [
+            "Lime",
+            3.0
+          ],
+          [
+            "ONE-MUL NS",
+            12.0
+          ],
+          [
+            "MICROBAR (GBL011)",
+            null
+          ],
+          [
+            "VERSAWET",
+            3.5
+          ],
+          [
+            "VERSATROL M",
+            7.0
+          ],
+          [
+            "103146834",
+            1.0
+          ],
+          [
+            "VERSAMOD",
+            1.0
+          ]
         ]
       }
     ]
   },
   {
     "FluidSystem": "rheguard-x-sbm",
-    "BaseFluids": [ "synthetic-b", "io-c16-18", "io-c15-18" ],
+    "BaseFluids": [
+      "synthetic-b",
+      "io-c16-18",
+      "io-c15-18"
+    ],
     "Recipes": [
       {
         "Density": 0.0,
         "Products": [
-          [ "M0000075", null ],
-          [ "AnySalt", null ],
-          [ "AnyBaseFluid", null ],
-          [ "M0024290", null ],
-          [ "M0004111", 4.0 ],
-          [ "M0023812", 12.0 ],
-          [ "102829101", 4.0 ],
-          [ "M0000832", 2.0 ],
-          [ "M0001629", 3.5 ],
-          [ "M0007336", 1.0 ],
-          [ "M0023012", 8.0 ],
-          [ "M0000348", 1.5 ]
+          [
+            "FRESH WATER",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "MICROBAR (GBL011)",
+            null
+          ],
+          [
+            "Lime",
+            4.0
+          ],
+          [
+            "RHEMUL",
+            12.0
+          ],
+          [
+            "102829101",
+            4.0
+          ],
+          [
+            "SUREWET",
+            2.0
+          ],
+          [
+            "VG-PLUS",
+            3.5
+          ],
+          [
+            "ECOTROL RD",
+            1.0
+          ],
+          [
+            "DURAMOD",
+            8.0
+          ],
+          [
+            "RHEFLAT",
+            1.5
+          ]
         ]
       }
     ]
   },
   {
     "FluidSystem": "rheguard-v-sbm",
-    "BaseFluids": [ "synthetic-b", "io-c16-18", "io-c15-18" ],
+    "BaseFluids": [
+      "synthetic-b",
+      "io-c16-18",
+      "io-c15-18"
+    ],
     "Recipes": [
       {
         "Density": 0.0,
         "Products": [
-          [ "M0000075", null ],
-          [ "AnySalt", null ],
-          [ "AnyBaseFluid", null ],
-          [ "M0009473", null ],
-          [ "M0004111", 4.0 ],
-          [ "M0023812", 12.0 ],
-          [ "102829101", 4.0 ],
-          [ "M0000832", 2.0 ],
-          [ "M0001629", 3.5 ],
-          [ "M0007336", 1.0 ],
-          [ "M0023012", 8.0 ],
-          [ "M0000348", 1.5 ]
+          [
+            "FRESH WATER",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "M-I WATE",
+            null
+          ],
+          [
+            "Lime",
+            4.0
+          ],
+          [
+            "RHEMUL",
+            12.0
+          ],
+          [
+            "102829101",
+            4.0
+          ],
+          [
+            "SUREWET",
+            2.0
+          ],
+          [
+            "VG-PLUS",
+            3.5
+          ],
+          [
+            "ECOTROL RD",
+            1.0
+          ],
+          [
+            "DURAMOD",
+            8.0
+          ],
+          [
+            "RHEFLAT",
+            1.5
+          ]
         ]
       }
     ]
   },
   {
     "FluidSystem": "glydril",
-    "BaseFluids": [ "water", "seawater" ],
+    "BaseFluids": [
+      "water",
+      "seawater"
+    ],
     "Recipes": [
       {
         "Density": 0.0,
         "Products": [
-          [ "AnyBaseFluid", null ],
-          [ "AnySalt", null ],
-          [ "AnySalt", null ],
-          [ "AnyBrine", null ],
-          [ "AnyBrine", null ],
-          [ "M0009473", null ],
-          [ "M0004182", 0.5 ],
-          [ "M0002973", 1.0 ],
-          [ "M0004023", null ],
-          [ "M0002205", 3.0 ],
-          [ "M0004750", 5.0 ]
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "M-I WATE",
+            null
+          ],
+          [
+            "SODA ASH",
+            0.5
+          ],
+          [
+            "DUO-VIS",
+            1.0
+          ],
+          [
+            "POTASSIUM HYDROXIDE",
+            null
+          ],
+          [
+            "POLYPAC UL",
+            3.0
+          ],
+          [
+            "GLYDRIL LC",
+            5.0
+          ]
         ]
       }
     ]
   },
   {
     "FluidSystem": "glydril-plus",
-    "BaseFluids": [ "water", "seawater" ],
+    "BaseFluids": [
+      "water",
+      "seawater"
+    ],
     "Recipes": [
       {
         "Density": 0.0,
         "Products": [
-          [ "AnyBaseFluid", null ],
-          [ "AnySalt", null ],
-          [ "AnySalt", null ],
-          [ "AnyBrine", null ],
-          [ "AnyBrine", null ],
-          [ "M0009473", null ],
-          [ "M0004182", 0.5 ],
-          [ "M0005294", 1.0 ],
-          [ "M0004885", 3.0 ],
-          [ "M0004749", 5.0 ]
+          [
+            "AnyBaseFluid",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnySalt",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "AnyBrine",
+            null
+          ],
+          [
+            "M-I WATE",
+            null
+          ],
+          [
+            "SODA ASH",
+            0.5
+          ],
+          [
+            "DUO-TEC NS",
+            1.0
+          ],
+          [
+            "POLYPAC ELV",
+            3.0
+          ],
+          [
+            "GLYDRIL MC",
+            5.0
+          ]
         ]
       }
     ]

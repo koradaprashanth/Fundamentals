@@ -40,12 +40,12 @@ namespace coreWebApp.Controllers
 
         public IActionResult Index()
         {
-            string inFilePath = "C:\\Users\\PKorada\\Documents\\Projects\\Fundamentals\\coreWebApp\\Files\\Technology.xlsx";
-            string outFilePath = "C:\\Users\\PKorada\\Documents\\Projects\\Fundamentals\\coreWebApp\\Files\\technology.json";
+            string inFilePath = "C:\\Users\\PKorada\\Documents\\Projects\\Fundamentals\\coreWebApp\\Files\\mud-recipes-v2.json";
+            string outFilePath = "C:\\Users\\PKorada\\Documents\\Projects\\Fundamentals\\coreWebApp\\Files\\rewriteFile.json";
 
-            var newId = Guid.NewGuid().ToString("N");
+            //var newId = Guid.NewGuid().ToString("N");
             //UsingOleDb(inFilePath, outFilePath, "Technology");
-
+            DeletePropertyJson(inFilePath, outFilePath);
             return View();
         }
 
@@ -188,6 +188,26 @@ namespace coreWebApp.Controllers
                             product[0] = val;
                         }
                     }
+                }
+            }
+
+            var json = jsonParsed.ToString();
+
+            System.IO.File.WriteAllText(rewritePath, JsonPrettify(json));
+        }
+
+        private static void DeletePropertyJson(string path,string rewritePath)
+        {
+            string jsonString = System.IO.File.ReadAllText(path);
+
+            var jsonParsed = JArray.Parse(jsonString);
+
+            foreach (var item in jsonParsed)
+            {
+                foreach (var property in item.Children<JProperty>().ToArray())
+                {
+                    if (property.Name.Equals("BaseFluids") && property.Value.Type == JTokenType.Array)
+                        property.Remove();
                 }
             }
 

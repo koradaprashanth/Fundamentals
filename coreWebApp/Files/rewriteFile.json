@@ -1,12 +1,6 @@
 [
   {
     "FluidSystem": "versaclean",
-    "BaseFluids": [
-      "escaid-115",
-      "escaid-110",
-      "mineral-oil-lvt-200",
-      "edc-95-11"
-    ],
     "Recipes": [
       {
         "Density": 8.5,
@@ -217,12 +211,6 @@
   },
   {
     "FluidSystem": "versadril",
-    "BaseFluids": [
-      "diesel-2-red-dyed",
-      "cutter-stock-d",
-      "distillate-822",
-      "diesel-fuel"
-    ],
     "Recipes": [
       {
         "Density": 8.5,
@@ -433,15 +421,6 @@
   },
   {
     "FluidSystem": "versatec",
-    "BaseFluids": [
-      "escaid-115",
-      "escaid-110",
-      "mineral-oil-lvt-200",
-      "edc-95-11",
-      "escaid-120",
-      "edc-99-dw",
-      "edc-diamond"
-    ],
     "Recipes": [
       {
         "Density": 10,
@@ -492,16 +471,6 @@
   },
   {
     "FluidSystem": "versapro",
-    "BaseFluids": [
-      "escaid-115",
-      "escaid-110",
-      "mineral-oil-lvt-200",
-      "edc-95-11",
-      "escaid-120",
-      "edc-99-dw",
-      "edc-diamond",
-      "escaid-120-ula"
-    ],
     "Recipes": [
       {
         "Density": 10,
@@ -540,16 +509,6 @@
   },
   {
     "FluidSystem": "fazepro",
-    "BaseFluids": [
-      "escaid-115",
-      "escaid-110",
-      "mineral-oil-lvt-200",
-      "edc-95-11",
-      "escaid-120",
-      "edc-99-dw",
-      "edc-diamond",
-      "escaid-120-ula"
-    ],
     "Recipes": [
       {
         "Density": 10,
@@ -592,16 +551,6 @@
   },
   {
     "FluidSystem": "ob-warp",
-    "BaseFluids": [
-      "escaid-115",
-      "escaid-110",
-      "mineral-oil-lvt-200",
-      "edc-95-11",
-      "escaid-120",
-      "edc-99-dw",
-      "edc-diamond",
-      "escaid-120-ula"
-    ],
     "Recipes": [
       {
         "Density": 10,
@@ -644,11 +593,6 @@
   },
   {
     "FluidSystem": "warp-4200",
-    "BaseFluids": [
-      "synthetic-b",
-      "io-c16-18",
-      "io-c15-18"
-    ],
     "Recipes": [
       {
         "Density": 14,
@@ -691,10 +635,6 @@
   },
   {
     "FluidSystem": "rhadiant",
-    "BaseFluids": [
-      "saraline-185v",
-      "synthetic-b"
-    ],
     "Recipes": [
       {
         "Density": 10.5,
@@ -741,12 +681,6 @@
   },
   {
     "FluidSystem": "megadril-sbm",
-    "BaseFluids": [
-      "bio-base-300",
-      "hf-1000-solvent",
-      "bio-base-365",
-      "bio-base-360"
-    ],
     "Recipes": [
       {
         "Density": 9,
@@ -884,14 +818,6 @@
   },
   {
     "FluidSystem": "megadril-obm",
-    "BaseFluids": [
-      "diesel-fuel",
-      "escaid-110",
-      "escaid-115",
-      "cutter-stock-d",
-      "distillate-822",
-      "diesel-2-red-dyed"
-    ],
     "Recipes": [
       {
         "Density": 9,
@@ -1029,14 +955,6 @@
   },
   {
     "FluidSystem": "megadril-with-megadrive",
-    "BaseFluids": [
-      "diesel-fuel",
-      "escaid-110",
-      "escaid-115",
-      "cutter-stock-d",
-      "distillate-822",
-      "diesel-2-red-dyed"
-    ],
     "Recipes": [
       {
         "Density": 9,
@@ -1132,9 +1050,6 @@
   },
   {
     "FluidSystem": "freshwater",
-    "BaseFluids": [
-      "water"
-    ],
     "Recipes": [
       {
         "Density": 8.345,
@@ -1169,9 +1084,6 @@
   },
   {
     "FluidSystem": "brine",
-    "BaseFluids": [
-      "water"
-    ],
     "Recipes": [
       {
         "Density": 10,
@@ -1259,7 +1171,7 @@
             null
           ],
           [
-            "???",
+            "POTASSIUM FORMATE LIQUID",
             null
           ]
         ]
@@ -1307,10 +1219,6 @@
   },
   {
     "FluidSystem": "ultradril",
-    "BaseFluids": [
-      "water",
-      "seawater"
-    ],
     "Recipes": [
       {
         "Density": 10,
@@ -1512,10 +1420,6 @@
   },
   {
     "FluidSystem": "dispersed-wbm",
-    "BaseFluids": [
-      "water",
-      "seawater"
-    ],
     "Recipes": [
       {
         "Density": 9.5,
@@ -1733,10 +1637,6 @@
   },
   {
     "FluidSystem": "low-solids-non-dispersed",
-    "BaseFluids": [
-      "water",
-      "seawater"
-    ],
     "Recipes": [
       {
         "Density": 10.5,
@@ -1791,10 +1691,6 @@
   },
   {
     "FluidSystem": "spud-mud",
-    "BaseFluids": [
-      "water",
-      "seawater"
-    ],
     "Recipes": [
       {
         "Density": 10,
@@ -1845,10 +1741,6 @@
   },
   {
     "FluidSystem": "envirotherm-nt",
-    "BaseFluids": [
-      "water",
-      "seawater"
-    ],
     "Recipes": [
       {
         "Density": 12,
@@ -2255,10 +2147,6 @@
   },
   {
     "FluidSystem": "kla-shield",
-    "BaseFluids": [
-      "water",
-      "seawater"
-    ],
     "Recipes": [
       {
         "Density": 10,
@@ -2309,10 +2197,6 @@
   },
   {
     "FluidSystem": "hydraglyde",
-    "BaseFluids": [
-      "water",
-      "seawater"
-    ],
     "Recipes": [
       {
         "Density": 10.5,
@@ -2375,10 +2259,6 @@
   },
   {
     "FluidSystem": "hydraglyde-optima",
-    "BaseFluids": [
-      "water",
-      "seawater"
-    ],
     "Recipes": [
       {
         "Density": 10.5,
@@ -2437,9 +2317,6 @@
   },
   {
     "FluidSystem": "generic-land-sbm",
-    "BaseFluids": [
-      "synthetic-b"
-    ],
     "Recipes": [
       {
         "Density": 9,
@@ -2482,9 +2359,6 @@
   },
   {
     "FluidSystem": "generic-obm",
-    "BaseFluids": [
-      "diesel-fuel"
-    ],
     "Recipes": [
       {
         "Density": 9,
@@ -2527,10 +2401,6 @@
   },
   {
     "FluidSystem": "generic-dispersed",
-    "BaseFluids": [
-      "water",
-      "seawater"
-    ],
     "Recipes": [
       {
         "Density": 9.5,
@@ -2589,10 +2459,6 @@
   },
   {
     "FluidSystem": "generic-lsnd",
-    "BaseFluids": [
-      "water",
-      "seawater"
-    ],
     "Recipes": [
       {
         "Density": 10.5,
@@ -2647,10 +2513,6 @@
   },
   {
     "FluidSystem": "generic-spud-mud",
-    "BaseFluids": [
-      "water",
-      "seawater"
-    ],
     "Recipes": [
       {
         "Density": 10,
@@ -2693,9 +2555,6 @@
   },
   {
     "FluidSystem": "paradril-sbm",
-    "BaseFluids": [
-      "puredrill-ia-35-lv"
-    ],
     "Recipes": [
       {
         "Density": 10.8485,
@@ -2746,10 +2605,6 @@
   },
   {
     "FluidSystem": "flopro-nt",
-    "BaseFluids": [
-      "water",
-      "seawater"
-    ],
     "Recipes": [
       {
         "Density": 1.0,
@@ -2796,9 +2651,6 @@
   },
   {
     "FluidSystem": "fluxdril",
-    "BaseFluids": [
-      "water"
-    ],
     "Recipes": [
       {
         "Density": 0.0,
@@ -2857,12 +2709,6 @@
   },
   {
     "FluidSystem": "rheguard-prime-obm",
-    "BaseFluids": [
-      "escaid-120-ula",
-      "escaid-120",
-      "edc-99-dw-cm",
-      "sipdrill-2-0"
-    ],
     "Recipes": [
       {
         "Density": 0.0,
@@ -2917,11 +2763,6 @@
   },
   {
     "FluidSystem": "rheguard-x-sbm",
-    "BaseFluids": [
-      "synthetic-b",
-      "io-c16-18",
-      "io-c15-18"
-    ],
     "Recipes": [
       {
         "Density": 0.0,
@@ -2980,11 +2821,6 @@
   },
   {
     "FluidSystem": "rheguard-v-sbm",
-    "BaseFluids": [
-      "synthetic-b",
-      "io-c16-18",
-      "io-c15-18"
-    ],
     "Recipes": [
       {
         "Density": 0.0,
@@ -3043,10 +2879,6 @@
   },
   {
     "FluidSystem": "glydril",
-    "BaseFluids": [
-      "water",
-      "seawater"
-    ],
     "Recipes": [
       {
         "Density": 0.0,
@@ -3101,10 +2933,6 @@
   },
   {
     "FluidSystem": "glydril-plus",
-    "BaseFluids": [
-      "water",
-      "seawater"
-    ],
     "Recipes": [
       {
         "Density": 0.0,
