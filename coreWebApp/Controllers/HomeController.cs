@@ -40,12 +40,12 @@ namespace coreWebApp.Controllers
 
         public IActionResult Index()
         {
-            string inFilePath = "C:\\Users\\PKorada\\Documents\\Projects\\Fundamentals\\coreWebApp\\Files\\mud-recipes-v2.json";
-            string outFilePath = "C:\\Users\\PKorada\\Documents\\Projects\\Fundamentals\\coreWebApp\\Files\\rewriteFile.json";
+            string inFilePath = "C:\\Users\\PKorada\\Documents\\Projects\\Fundamentals\\coreWebApp\\Files\\V3\\MudProducts.xlsx";
+            string outFilePath = "C:\\Users\\PKorada\\Documents\\Projects\\Fundamentals\\coreWebApp\\Files\\V3\\rewriteFile.json";
 
             //var newId = Guid.NewGuid().ToString("N");
             //UsingOleDb(inFilePath, outFilePath, "Technology");
-            DeletePropertyJson(inFilePath, outFilePath);
+            UsingOleDb(inFilePath, outFilePath, "NewStructure");
             return View();
         }
 
@@ -72,10 +72,6 @@ namespace coreWebApp.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-        private static void ConvertExcelToJson(string field, string sourcePath, string desinationPath)
-        {
-
-        }
 
         private static void UsingOleDb(string inFilePath, string outFilePath, string sheetName)
         {
@@ -97,16 +93,21 @@ namespace coreWebApp.Controllers
                          {
                              var data = new Dictionary<string, object>
                                     {
-                                {dr.GetName(0), x[0]},
-                                {dr.GetName(1), x[1]},
-                                {dr.GetName(2), x[2]},
-                                {dr.GetName(3), x[3]}
+                                {"Id", x[9]},
+                                {"Name", x[8]},
+                                {"TechnologyId", x[4]},
+                                {"Technology", x[4]},
+                                {"BrandId", x[5]},
+                                {"Brand", x[5]},
+                                {"ShL71Id", x[7]},
+                                {"ShL71", x[7]},
+                                {"SG", x[10]}
                                     };
                              return data;
                          });
 
                     var json = JsonConvert.SerializeObject(query);
-                    System.IO.File.WriteAllText(outFilePath, json);
+                    System.IO.File.WriteAllText(outFilePath, JsonPrettify(json));
                 }
             }
         }
