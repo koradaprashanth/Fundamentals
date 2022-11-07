@@ -1,0 +1,271 @@
+{
+  "Breakers": [
+    "Acid Inhibitors",
+    "Acid Precursors",
+    "Acid breaker",
+    "Breakdown",
+    "Chelants",
+    "Dispersants",
+    "Ecf Products",
+    "Emulsion Preventer",
+    "Enzymes",
+    "Faze-Out",
+    "Flowback Enhancer",
+    "Oxidizers",
+    "Acid/Base"
+  ],
+  "Defoamers": [
+    "All Purpose Defoamer",
+    "Specialized Defoamer",
+    "Unclassified Defoamer"
+  ],
+  "Shale Inhibitor": [
+    "Amine based Inhibitor",
+    "Asphault based Inhibitor",
+    "Encapsulator",
+    "Glycol based Inhibitor",
+    "Hydrate Inhibitors",
+    "Stabilizer",
+    "Surfactant based Inhibitor",
+    "Unclassified Shale Inhibitor"
+  ],
+  "Other": [
+    "Ammonium Chloride",
+    "Bentonite Other",
+    "Calcium Nitrate",
+    "Calcium Sulphate",
+    "Cement Retarders",
+    "Glycol",
+    "Hdd",
+    "Lab testing chemical",
+    "Lime",
+    "Other",
+    "Temperature Stabilizer",
+    "Other - local competitor",
+    "Other - Russian chemical",
+    "Other EMI",
+    "Other Minerals ",
+    "PH Control",
+    "Rig Cleaning",
+    "Screens",
+    "Sodium Silicate",
+    "Tracers",
+    "Unclassified Surfactant",
+    "Water",
+    "WBM Stabilizer",
+    "To be classified"
+  ],
+  "Weighting Materials": [
+    "Barite",
+    "Calcium Carbonate Weighting Agent",
+    "Hematite ",
+    "Micronized Barite",
+    "Weighting Agents Other",
+    "Weight reducing Agent"
+  ],
+  "Base Fluids": [
+    "Base Oil",
+    "Base Paraffin",
+    "Base Synthetic",
+    "Diesel",
+    "Other Base Fluids"
+  ],
+  "Water-Based Drilling Fluids": [
+    "Low-Tech WBM",
+    "Drilplex",
+    "Ems-3100",
+    "Ems-3360",
+    "Envirotherm R",
+    "Flopro",
+    "Flothru",
+    "Glydril",
+    "Ultradril",
+    "Duratherm",
+    "Kla-Shield",
+    "Sildril",
+    "Veratherm",
+    "FluxDril",
+    "Hydraglyde",
+    "POLY-PLUS",
+    "WBM - Other"
+  ],
+  "Lost Circulation Materials": [
+    "Bridging Agent",
+    "Calcium Carbonate LCM",
+    "Coarse LCM",
+    "Fine LCM",
+    "Medium LCM",
+    "Unspecified Size LCM",
+    "Specialty LCM",
+    "Wellbore Strengthening"
+  ],
+  "Viscosifiers": [
+    "Brine Viscosifier",
+    "NAF LSRV Viscosifier",
+    "NAF Viscosifier",
+    "Unclassified Viscosifier",
+    "WBM Bentonite Viscosifier",
+    "WBM Viscosifier"
+  ],
+  "Brines": [
+    "Calcium Bromide",
+    "Calcium Chloride",
+    "Calcium Chloride / Bromide",
+    "Cesium Formate",
+    "Cesium/Potassium Formate",
+    "Magnesium Chloride",
+    "Potassium Bromide",
+    "Potassium Chloride",
+    "Potassium Chloride/Sodium Bromide",
+    "Potassium Formate",
+    "Sodium Bisulphate",
+    "Sodium Bromide",
+    "Sodium Bromide/Chloride",
+    "Sodium Chloride",
+    "Sodium Formate",
+    "Sodium/Potassium Chloride",
+    "Unclassified Salt",
+    "Zinc Bromide",
+    "Zinc Chloride Liquid",
+    "Zinc/Calcium Bromide",
+    "CALCIUM BROMIDE/ZINC BROMIDE",
+    "POTASSIUM CHLORIDE/SODIUM CHLORIDE SYSTEM",
+    "Potassium Chloride/Sodium Formate"
+  ],
+  "Displacement Chemicals": [
+    "Combination Casing Cleaning",
+    "Unclassified Displacement Chemicals",
+    "Screen Cleaning",
+    "Solvent Casing Cleaning",
+    "Surfactant Casing Cleaning"
+  ],
+  "Corrosion Inhibitors": [
+    "Completions Corrosion Inhibitor",
+    "Conquor inhibitor",
+    "Hydrogen Sulfide Scavengers",
+    "Oxygen Scavengers",
+    "SAFE-Inhibitor",
+    "Scale Inhibitors",
+    "Unclassified Corrosion Inhibitor",
+    "Oxygen Scavenger"
+  ],
+  "Filtration": [
+    "Diatomaceous Earth",
+    "Filtration Flocculation",
+    "Filters"
+  ],
+  "WBM Reservoir Drill-In Fluids": [
+    "Dipro",
+    "Flopro",
+    "Flothru"
+  ],
+  "Other Drilling Fluids": [
+    "Direct Emulsion Fluids",
+    "Foam Drilling"
+  ],
+  "Lubricants & ROP Enhancers": [
+    "Drill Beads",
+    "Lubricant",
+    "ROP Enhancer",
+    "Unclassified Lubicrant and ROP"
+  ],
+  "Oil-Based Drilling Fluids": [
+    "Ems-4600",
+    "Ems-6800 Sr",
+    "Exploradrill",
+    "Megadril",
+    "Novaplus",
+    "Novapro",
+    "Novatec",
+    "PREMIX OB LOW VIS",
+    "Paradril",
+    "Paraland",
+    "Paramud",
+    "Parapro",
+    "Paratec",
+    "Rhadiant",
+    "Rheguard",
+    "Rheliant",
+    "Rheliant Plus",
+    "Versaclean",
+    "Versacore",
+    "Versadril",
+    "Versapro",
+    "Versatec",
+    "Versatherm",
+    "Versavert",
+    "Warp",
+    "OBM - Other",
+    "SBM - Other"
+  ],
+  "NAF Reservoir Drill-In Fluids": [
+    "Fazepro",
+    "REAPRO",
+    "STARDRIL"
+  ],
+  "Emulsifiers": [
+    "NAF Generic Emulsifier",
+    "NAF FazePro Emulsifier",
+    "NAF Megadril Emulsifier",
+    "NAF Novadril Emulisifier",
+    "NAF Novatec Emulsifier",
+    "NAF Primofaze Emulsifier",
+    "NAF Rheguard Emulsifier",
+    "NAF Suremul Emulsifier",
+    "NAF Versa Emulsifier",
+    "Generic Emulsifier"
+  ],
+  "Pills - Spacers - Other Systems": [
+    "Gravelpack carrier fluid",
+    "Insulating Packer Fluids",
+    "Packer Fluids",
+    "Perforation Pill",
+    "Pills",
+    "Versa-Out"
+  ],
+  "Services": [
+    "Lump Sum",
+    "Rental",
+    "Services"
+  ],
+  "Wetting Agent": [
+    "NAF FazePro Wetting Agent",
+    "NAF Generic Wetting Agent",
+    "NAF Nova Wetting Agent",
+    "NAF Versa Wetting Agent",
+    "Generic Wetting Agent"
+  ],
+  "Fluid Loss Additives": [
+    "NAF Fluid Loss Additive",
+    "NAF Versa Fluid Loss Additive",
+    "Unclassified Fluid Loss Additive",
+    "WBM Fluid Loss Additive"
+  ],
+  "Fluid Recovery": [
+    "NAF Fluid Recovery",
+    "Unclassified Flocculant",
+    "WBM Fluid Recovery"
+  ],
+  "Stuck Pipe Freeing Agents": [
+    "NAF Stuck Pipe Freeing Agents",
+    "Unclassified Stuck Pipe Freeing Agents",
+    "WBM Stuck Pipe Freeing Agents"
+  ],
+  "Thinners": [
+    "NAF Thinner",
+    "WBM Thinner",
+    "Unclassified Thinner"
+  ],
+  "Biocides": [
+    "Triazine",
+    "Unclassified Biocide"
+  ],
+  "Packaging": [
+    "Packaging"
+  ],
+  "Waste Management": [
+    "Waste Management Flocculation",
+    "Waste Management Unclassified",
+    "Water Clarifiers"
+  ]
+}

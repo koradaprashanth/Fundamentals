@@ -47,8 +47,8 @@ namespace coreWebApp.Controllers
             //UsingOleDb(inFilePath, outFilePath, "Technology");
             //UsingOleDb(inFilePath, outFilePath, "NewStructure");
 
-            var products = UsingOleDbToGetProductKeyValues(inFilePath, "NewStructure");
-            RewriteJson(products);
+            var products = UsingOleDbToGetTechnologyBrandCombos(inFilePath, "NewStructure");
+            RewriteJsonTechnologyBrandCombos(products);
             return View();
         }
 
@@ -142,6 +142,41 @@ namespace coreWebApp.Controllers
             return keyValuePairs;
         }
 
+        private static Dictionary<string, HashSet<string>> UsingOleDbToGetTechnologyBrandCombos(string inFilePath, string sheetName)
+        {
+            //"HDR=Yes;" indicates that the first row contains column names, not data.
+            var connectionString = $@"
+        Provider=Microsoft.ACE.OLEDB.12.0;
+        Data Source={inFilePath};
+        Extended Properties=""Excel 12.0 Xml;HDR=YES""";
+            Dictionary<string, string> keyValuePairs = new Dictionary<string, string>();
+            Dictionary<string, HashSet<string>> technologyBrandCombinations = new Dictionary<string, HashSet<string>>();
+            using (var conn = new OleDbConnection(connectionString))
+            {
+                conn.Open();
+                var cmd = conn.CreateCommand();
+                cmd.CommandText = $@"SELECT * FROM [{sheetName}$]";
+
+                using (var dr = cmd.ExecuteReader())
+                {
+                    foreach (DbDataRecord item in dr)
+                    {
+                        if (technologyBrandCombinations.ContainsKey(item[4].ToString()))
+                        {
+                            technologyBrandCombinations[item[4].ToString()].Add(item[5].ToString());
+                        }
+                        else
+                        {
+                            technologyBrandCombinations.Add(item[4].ToString(), new HashSet<string>() { item[5].ToString() });
+                        }
+                        keyValuePairs.Add(item[8].ToString(), item[9].ToString());
+                    }
+                }
+            }
+
+            return technologyBrandCombinations;
+        }
+
         private static void GetLegacyExcelDataIntoDictionary()
         {
             var path = "C:\\Users\\PKorada\\Documents\\Projects\\Fundamentals\\coreWebApp\\Files\\Mud_Recipes.xlsx";
@@ -191,7 +226,15 @@ namespace coreWebApp.Controllers
             RewriteJson(recipes);
         }
 
-        
+        private static void RewriteJsonTechnologyBrandCombos(Dictionary<string, HashSet<string>> products)
+        {
+            var rewritePath = "C:\\Users\\PKorada\\Documents\\Projects\\Fundamentals\\coreWebApp\\Files\\V4\\rewriteFile.json";
+
+            string jsonString = JsonConvert.SerializeObject(products);
+
+            System.IO.File.WriteAllText(rewritePath, JsonPrettify(jsonString));
+        }
+
         private static void RewriteJson(Dictionary<string,string> products)
         {
             var path = "C:\\Users\\PKorada\\Documents\\Projects\\Fundamentals\\coreWebApp\\Files\\V3\\Recipes\\mud-recipes-v2.json";
