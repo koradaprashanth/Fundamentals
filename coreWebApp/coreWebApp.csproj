@@ -8,6 +8,8 @@
     <Content Remove="Files\mud-recipes-v2.json" />
     <Content Remove="Files\rewriteFile.json" />
     <Content Remove="Files\V2\rewriteFile.json" />
+    <Content Remove="Files\V3\Recipes\mud-recipes-v2.json" />
+    <Content Remove="Files\V3\Recipes\rewriteFile.json" />
     <Content Remove="Files\V3\rewriteFile.json" />
   </ItemGroup>
 
@@ -19,6 +21,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Files\V2\rewriteFile.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Files\V3\Recipes\mud-recipes-v2.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Files\V3\Recipes\rewriteFile.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Files\V3\rewriteFile.json">

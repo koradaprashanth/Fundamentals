@@ -41,11 +41,14 @@ namespace coreWebApp.Controllers
         public IActionResult Index()
         {
             string inFilePath = "C:\\Users\\PKorada\\Documents\\Projects\\Fundamentals\\coreWebApp\\Files\\V3\\MudProducts.xlsx";
-            string outFilePath = "C:\\Users\\PKorada\\Documents\\Projects\\Fundamentals\\coreWebApp\\Files\\V3\\rewriteFile.json";
+            //string outFilePath = "C:\\Users\\PKorada\\Documents\\Projects\\Fundamentals\\coreWebApp\\Files\\V3\\rewriteFile.json";
 
             //var newId = Guid.NewGuid().ToString("N");
             //UsingOleDb(inFilePath, outFilePath, "Technology");
-            UsingOleDb(inFilePath, outFilePath, "NewStructure");
+            //UsingOleDb(inFilePath, outFilePath, "NewStructure");
+
+            var products = UsingOleDbToGetProductKeyValues(inFilePath, "NewStructure");
+            RewriteJson(products);
             return View();
         }
 
@@ -112,6 +115,33 @@ namespace coreWebApp.Controllers
             }
         }
 
+
+        private static Dictionary<string,string> UsingOleDbToGetProductKeyValues(string inFilePath, string sheetName)
+        {
+            //"HDR=Yes;" indicates that the first row contains column names, not data.
+            var connectionString = $@"
+        Provider=Microsoft.ACE.OLEDB.12.0;
+        Data Source={inFilePath};
+        Extended Properties=""Excel 12.0 Xml;HDR=YES""";
+            Dictionary<string, string> keyValuePairs = new Dictionary<string, string>();
+            using (var conn = new OleDbConnection(connectionString))
+            {
+                conn.Open();
+                var cmd = conn.CreateCommand();
+                cmd.CommandText = $@"SELECT * FROM [{sheetName}$]";
+               
+                using (var dr = cmd.ExecuteReader())
+                {
+                    foreach (DbDataRecord item in dr)
+                    {
+                        keyValuePairs.Add(item[8].ToString(), item[9].ToString());
+                    }
+                }
+            }
+
+            return keyValuePairs;
+        }
+
         private static void GetLegacyExcelDataIntoDictionary()
         {
             var path = "C:\\Users\\PKorada\\Documents\\Projects\\Fundamentals\\coreWebApp\\Files\\Mud_Recipes.xlsx";
@@ -162,10 +192,10 @@ namespace coreWebApp.Controllers
         }
 
         
-        private static void RewriteJson(Dictionary<string,string> recipes)
+        private static void RewriteJson(Dictionary<string,string> products)
         {
-            var path = "C:\\Users\\PKorada\\Documents\\Projects\\Fundamentals\\coreWebApp\\Files\\mud-recipes-v2.json";
-            var rewritePath = "C:\\Users\\PKorada\\Documents\\Projects\\Fundamentals\\coreWebApp\\Files\\rewriteFile.json";
+            var path = "C:\\Users\\PKorada\\Documents\\Projects\\Fundamentals\\coreWebApp\\Files\\V3\\Recipes\\mud-recipes-v2.json";
+            var rewritePath = "C:\\Users\\PKorada\\Documents\\Projects\\Fundamentals\\coreWebApp\\Files\\V3\\Recipes\\rewriteFile.json";
 
             string jsonString = System.IO.File.ReadAllText(path);
 
@@ -178,11 +208,8 @@ namespace coreWebApp.Controllers
                 {
                     foreach (var product in recipe["Products"])
                     {
-                        string val = "";
-                        if (product[0].Value<string>().StartsWith("M"))
-                        {
-                           recipes.TryGetValue(product[0].Value<string>(), out val);
-                        }
+                        string val;
+                        products.TryGetValue(product[0].Value<string>().Trim(), out val);
 
                         if (!String.IsNullOrEmpty(val))
                         {
