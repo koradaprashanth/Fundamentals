@@ -24,11 +24,18 @@ using Slb.Drilling.OceanUnits;
 using System.Data.Common;
 using static System.Net.WebRequestMethods;
 using System.Reflection.Metadata;
+using System.Text.RegularExpressions;
+using Spire.Xls;
+using BasicProblems.ExcelImport;
+using Spire.Xls.Core;
+using SkiaSharp;
 
 namespace coreWebApp.Controllers
 {
     public class HomeController : Controller
     {
+
+        public const string SpecialCharacters = "?¿!¡*%#$(){}[]^&/\\~+-`@_=|:;'<>.,";
         private readonly ILogger<HomeController> _logger;
 
         private readonly IUnitSystem englishUnitSystem;
@@ -40,16 +47,144 @@ namespace coreWebApp.Controllers
 
         public IActionResult Index()
         {
-            string inFilePath = "C:\\Users\\PKorada\\Documents\\Projects\\Fundamentals\\coreWebApp\\Files\\V3\\MudProducts.xlsx";
+            //string inFilePath = "C:\\Users\\PKorada\\Documents\\Projects\\Fundamentals\\coreWebApp\\Files\\V4\\MudProducts.xlsx";
             //string outFilePath = "C:\\Users\\PKorada\\Documents\\Projects\\Fundamentals\\coreWebApp\\Files\\V3\\rewriteFile.json";
-
+            //var rewritePath = "C:\\Users\\PKorada\\Documents\\Projects\\Fundamentals\\coreWebApp\\Files\\V4\\brand.json";
             //var newId = Guid.NewGuid().ToString("N");
             //UsingOleDb(inFilePath, outFilePath, "Technology");
             //UsingOleDb(inFilePath, outFilePath, "NewStructure");
 
-            var products = UsingOleDbToGetTechnologyBrandCombos(inFilePath, "NewStructure");
-            RewriteJsonTechnologyBrandCombos(products);
-            return View();
+            //var products = UsingOleDbToGetBrandValues(inFilePath, "NewStructure");
+            //GenericRewriteJson(products, rewritePath);
+
+           
+
+            using (var stream = GetExcelTemplate())
+            {
+                return File(
+                    stream.ToArray(),
+                    "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                    "products-template.xlsm");
+            }
+        }
+
+        public MemoryStream GetExcelTemplate()
+        {
+            var technologiesObj = new Technology();
+            var brandObj = new Brand();
+
+            var technologies = technologiesObj.GetTechnologies();
+            var brands = brandObj.GetBrands();
+
+            var combinationsObj = new Technology_Brand();
+            var combinations = combinationsObj.GetCombinations();
+
+            //Create a Workbook object
+            Workbook workbook = new Workbook();
+            //FileStream fileStream = new FileStream(@"C:\Users\PKorada\Documents\Projects\Fundamentals\BasicProblems\ExcelImport\CustomProductCatalog.xlsm", FileMode.Open);
+
+            //Initailize worksheet
+            workbook.LoadFromFile(@"C:\Users\PKorada\Documents\Projects\Fundamentals\BasicProblems\ExcelImport\CustomProductCatalog.xlsm");
+            //Get the first worksheet 
+            Worksheet sheet = workbook.Worksheets[0];
+            var columnIndex = 0;
+            sheet[1, 1].Value = "Technology";
+            sheet.Columns[columnIndex].ColumnWidth = 20;
+            sheet.Columns[columnIndex].Style.Font.IsBold = true;
+            var numHeaderRows1 = sheet.LastDataRow;
+
+            var columnIndex1 = 1;
+            sheet[1, 2].Value = "Brand";
+            sheet.Columns[columnIndex1].ColumnWidth = 20;
+            sheet.Columns[columnIndex1].Style.Font.IsBold = true;
+            var numHeaderRow2 = sheet.LastDataRow;
+
+            //Set the values of the drop-down list 
+            //sheet.Range["A2"].DataValidation.Values = technologies.ToArray();
+            sheet.Range["AX1"].Text = "Technologies";
+            for (int i = 1; i < technologies.Count; i++)
+            {
+                sheet.Range["AX" + (i + 1)].Text = technologies[i];
+            }
+
+
+            CellRange rangeName = sheet.Range["A2"];
+            rangeName.DataValidation.AllowType = CellDataType.Formula;
+            rangeName.DataValidation.DataRange = sheet.Range["AX2:AX" + technologies.Count];
+            rangeName.DataValidation.IgnoreBlank = true;
+            rangeName.Activate();
+            //hide column X                                 
+            //sheet.HideColumn(sheet.Range["AX1"].Column);
+
+            //Create a drop-down list in the specified cell
+            sheet.Range["A2"].DataValidation.IsSuppressDropDownArrow = false;
+
+            ////Set the values of the drop-down list 
+            //sheet.Range["B2"].DataValidation.Values = brands.ToArray();
+            sheet.Range["AY1"].Text = "Brands";
+            for (int i = 1; i < brands.Count; i++)
+            {
+                sheet.Range["AY" + (i + 1)].Text = brands[i];
+            }
+
+            CellRange rangeNameB = sheet.Range["B2"];
+            rangeNameB.DataValidation.AllowType = CellDataType.Formula;
+            rangeNameB.DataValidation.DataRange = sheet.Range["AY2:AY" + brands.Count];
+            rangeNameB.DataValidation.IgnoreBlank = true;
+            rangeNameB.Activate();
+            //hide column X                                 
+            //sheet.HideColumn(sheet.Range["AY1"].Column);
+
+
+            ////Create a drop-down list in the specified cell
+            sheet.Range["B2"].DataValidation.IsSuppressDropDownArrow = false;
+
+            AddMetadataWorksheet(workbook);
+            INamedRange namedRange;
+            var startColumn = 10;
+            foreach (var item in combinations)
+            {
+                var columnName = GetExcelLetter(startColumn);
+                sheet[1, startColumn].Value = TrimAllInvalidCharacters(item.Key); // TrimAllWhiteSpaces(item.Key).Replace("-","").Replace("&","");
+                sheet.Columns[startColumn - 1].ColumnWidth = 30;
+                sheet.Rows[0].Style.Font.IsBold = true;
+                namedRange = workbook.NameRanges.Add(sheet.Range[columnName + 1].Text);
+                int rowNum = 2;
+                for (int i = 0; i < item.Value.Count; i++)
+                {
+                    sheet.SetCellValue(rowNum, startColumn, item.Value[i]);
+                    rowNum++;
+                }
+                namedRange.RefersToRange = sheet.Range[columnName + 2 + ":" + columnName + (rowNum - 1)];
+
+                startColumn++;
+            }
+
+
+            sheet.Range["B2"].DataValidation.Formula1 = GetDependentSelectionFormula("A", 2);//"=INDIRECT($A$2)";//=INDIRECT(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE($A$2,\" \",\"\"),\"-\",\"\"),\"&\",\"\"))";
+
+
+
+            ////Add ConditionalFormat
+            //XlsConditionalFormats xcfs = sheet.ConditionalFormats.Add();
+
+            ////Define the range
+            //xcfs.AddRange(sheet.Range["B2"]);
+
+            ////Add condition
+            //IConditionalFormat format = xcfs.AddCondition();
+            //format.FormatType = ConditionalFormatType.Formula;
+
+            //format.FirstFormula = "=ISERROR(VLOOKUP(B2,INDEX(data!$J$2:$AL$"+ sheet.LastDataRow + ",,MATCH(A2,data!$A$1:$B$1)),1,0))";
+
+            //format.FontColor = Color.White;
+
+
+
+            //Save the result document
+            var streamTest = new MemoryStream();
+            workbook.SaveToStream(streamTest, FileFormat.Xlsm);
+            return streamTest;
         }
 
         public static string JsonPrettify(string json)
@@ -142,6 +277,59 @@ namespace coreWebApp.Controllers
             return keyValuePairs;
         }
 
+        private static Dictionary<string, HashSet<string>> UsingOleDbToGetTechnologyValues(string inFilePath, string sheetName)
+        {
+            //"HDR=Yes;" indicates that the first row contains column names, not data.
+            var connectionString = $@"
+        Provider=Microsoft.ACE.OLEDB.12.0;
+        Data Source={inFilePath};
+        Extended Properties=""Excel 12.0 Xml;HDR=YES""";
+            Dictionary<string, HashSet<string>> keyValuePairs = new Dictionary<string, HashSet<string>>();
+            using (var conn = new OleDbConnection(connectionString))
+            {
+                conn.Open();
+                var cmd = conn.CreateCommand();
+                cmd.CommandText = $@"SELECT * FROM [{sheetName}$]";
+                keyValuePairs.Add("Technology", new HashSet<string>());
+                using (var dr = cmd.ExecuteReader())
+                {
+                    foreach (DbDataRecord item in dr)
+                    {
+                        keyValuePairs["Technology"].Add(item[4].ToString());
+                    }
+                }
+            }
+
+            return keyValuePairs;
+        }
+
+        private static Dictionary<string, HashSet<string>> UsingOleDbToGetBrandValues(string inFilePath, string sheetName)
+        {
+            //"HDR=Yes;" indicates that the first row contains column names, not data.
+            var connectionString = $@"
+        Provider=Microsoft.ACE.OLEDB.12.0;
+        Data Source={inFilePath};
+        Extended Properties=""Excel 12.0 Xml;HDR=YES""";
+            Dictionary<string, HashSet<string>> keyValuePairs = new Dictionary<string, HashSet<string>>();
+            using (var conn = new OleDbConnection(connectionString))
+            {
+                conn.Open();
+                var cmd = conn.CreateCommand();
+                cmd.CommandText = $@"SELECT * FROM [{sheetName}$]";
+                keyValuePairs.Add("Brand", new HashSet<string>());
+                using (var dr = cmd.ExecuteReader())
+                {
+                    foreach (DbDataRecord item in dr)
+                    {
+                        keyValuePairs["Brand"].Add(item[5].ToString());
+                    }
+                }
+            }
+
+            return keyValuePairs;
+        }
+
+
         private static Dictionary<string, HashSet<string>> UsingOleDbToGetTechnologyBrandCombos(string inFilePath, string sheetName)
         {
             //"HDR=Yes;" indicates that the first row contains column names, not data.
@@ -226,10 +414,8 @@ namespace coreWebApp.Controllers
             RewriteJson(recipes);
         }
 
-        private static void RewriteJsonTechnologyBrandCombos(Dictionary<string, HashSet<string>> products)
-        {
-            var rewritePath = "C:\\Users\\PKorada\\Documents\\Projects\\Fundamentals\\coreWebApp\\Files\\V4\\rewriteFile.json";
-
+        private static void GenericRewriteJson(Dictionary<string, HashSet<string>> products, string rewritePath)
+        {           
             string jsonString = JsonConvert.SerializeObject(products);
 
             System.IO.File.WriteAllText(rewritePath, JsonPrettify(jsonString));
@@ -359,6 +545,72 @@ namespace coreWebApp.Controllers
         }
 
 
+
+
+        private static string GetExcelLetter(int columnNum)
+        {
+            int num = columnNum;
+            int mod = 0;
+            string result = String.Empty;
+            while (num > 0)
+            {
+                mod = (num - 1) % 26;
+                result = (char)(65 + mod) + result;
+                num = (int)((num - mod) / 26);
+            }
+            return result;
+        }
+
+        public static string TrimAllWhiteSpaces(string s)
+        {
+            return s == null ? null : Regex.Replace(s, @"\s", string.Empty);
+        }
+
+        private static string GetDependentSelectionFormula(string columnName, int rowNum)
+        {
+            var formulaPrefix = "=INDIRECT(";
+            var formulaLogic = "$" + columnName + "$" + rowNum;
+            var substitudeSpaces = "SUBSTITUTE(" + formulaLogic + ",\" \",\"\")";
+            var strPrefix = string.Empty;
+            var strPostfix = string.Empty;
+            foreach (var item in SpecialCharacters)
+            {
+                strPrefix = strPrefix + "SUBSTITUTE(";
+                strPostfix = strPostfix + ",\"" + item + "\",\"\")";
+            }
+            //CHAR(34)
+            strPrefix = strPrefix + "SUBSTITUTE(";
+            strPostfix = strPostfix + ",CHAR(34),\"\")";
+
+            return formulaPrefix + strPrefix + substitudeSpaces + strPostfix + ")";
+
+            // var formula = "=INDIRECT(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(,\" \",\"\"),\"-\",\"\"),\"&\",\"\"))";
+        }
+
+        public static string TrimAllInvalidCharacters(string s)
+        {
+            s = s.Replace(" ", string.Empty);
+            foreach (var item in SpecialCharacters)
+            {
+                s = s.Replace(item.ToString(), string.Empty);
+            }
+
+            return s;
+        }
+
+
+        private static Worksheet AddMetadataWorksheet(Workbook workbook)
+        {
+            var workSheet = workbook.Worksheets.Add("Metadata");
+            var metadata = new Metadata();
+            metadata.Schema = Metadata.CurrentSchema;
+            var json = JsonConvert.SerializeObject(metadata);
+            workSheet.SetCellValue(1, 1, json);
+            //workSheet.Protect("products", SheetProtectionType.None);
+            return workSheet;
+        }
+
+
     }
 
     public class MudRecipes
@@ -432,4 +684,12 @@ namespace coreWebApp.Controllers
         }
     }
 
+}
+
+
+public class Metadata
+{
+    public const string CurrentSchema = "1.0";
+
+    public string Schema { get; set; }
 }

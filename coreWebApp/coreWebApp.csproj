@@ -42,7 +42,12 @@
     <PackageReference Include="EPPlus" Version="6.0.8" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="Slb.Drilling.OceanUnits" Version="2.1.647" />
+    <PackageReference Include="Spire.XLS" Version="12.10.1" />
     <PackageReference Include="System.Data.OleDb" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BasicProblems\BasicProblems.csproj" />
   </ItemGroup>
 
 </Project>
