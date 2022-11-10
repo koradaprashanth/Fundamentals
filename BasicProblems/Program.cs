@@ -1,4 +1,6 @@
 ﻿using BasicProblems;
+using BasicProblems.ExcelImport;
+using Newtonsoft.Json;
 using Spire.Xls;
 
 public class Program
@@ -65,45 +67,88 @@ public class Program
 
         #region SpireXls
 
+
+        var technologiesObj = new Technology();
+        var brandObj = new Brand();
+
+        var technologies = technologiesObj.GetTechnologies();
+        var brands = brandObj.GetBrands();
+
+        var combinationsObj = new Technology_Brand();
+        var combinations = combinationsObj.GetCombinations();
+
         //Create a Workbook object
         Workbook workbook = new Workbook();
 
         //Get the first worksheet 
         Worksheet sheet = workbook.Worksheets[0];
 
-        var columnIndex = 3-1;
-        sheet[1, 3].Value = "Continent";
+        var columnIndex = 0;
+        sheet[1, 1].Value = "Technology";
         sheet.Columns[columnIndex].ColumnWidth = 20;
         sheet.Columns[columnIndex].Style.Font.IsBold = true;
         var numHeaderRows1 = sheet.LastDataRow;
 
-        var columnIndex1 = 4-1;
-        sheet[1, 4].Value = "Country";
+        var columnIndex1 = 1;
+        sheet[1, 2].Value = "Brand";
         sheet.Columns[columnIndex1].ColumnWidth = 20;
         sheet.Columns[columnIndex1].Style.Font.IsBold = true;
         var numHeaderRow2 = sheet.LastDataRow;
 
         //Set the values of the drop-down list 
-        sheet.Range["C2"].DataValidation.Values = new string[] { "Asia", "North America", "Europe", "South America" };
-
-
-        var selectionCellRange = sheet[1, 1, numHeaderRows1, 1];
-        sheet.Range["C2:C5"].DataValidation.DataRange = selectionCellRange;
-
+        sheet.Range["A2"].DataValidation.Values = technologies.ToArray();
 
         //Create a drop-down list in the specified cell
-        sheet.Range["C2"].DataValidation.IsSuppressDropDownArrow = false;
+        sheet.Range["A2"].DataValidation.IsSuppressDropDownArrow = false;
 
         //Set the values of the drop-down list 
-        sheet.Range["D2"].DataValidation.Values = new string[] { "USA", "Canada", "Mexico", "India", "China", "Russia", "Italy", "Germany", "France", "Norway", "Columbia", "Brazil","Peru"};
+        sheet.Range["B2"].DataValidation.Values = brands.ToArray();
 
 
         //Create a drop-down list in the specified cell
-        sheet.Range["D2"].DataValidation.IsSuppressDropDownArrow = false;
+        sheet.Range["B2"].DataValidation.IsSuppressDropDownArrow = false;
+
+        AddMetadataWorksheet(workbook);
+
+        var startColumn = 7;
+        foreach (var item in combinations)
+        {
+            
+            sheet[1, startColumn].Value = item.Key;
+            sheet.Columns[startColumn-1].ColumnWidth = 30;
+            sheet.Rows[0].Style.Font.IsBold = true;
+            int rowNum = 2;
+            foreach (var brand in item.Value)
+            {
+                sheet.SetCellValue(rowNum, startColumn, brand);
+                rowNum++;
+            }
+
+            startColumn++;
+        }
+
 
         //Save the result document
         workbook.SaveToFile("ExcelDropdownList.xlsx", ExcelVersion.Version2010);
 
         #endregion
     }
+
+    private static Worksheet AddMetadataWorksheet(Workbook workbook)
+    {
+        var workSheet = workbook.Worksheets.Add("Metadata");
+        var metadata = new Metadata();
+        metadata.Schema = Metadata.CurrentSchema;
+        var json = JsonConvert.SerializeObject(metadata);
+        workSheet.SetCellValue(1, 1, json);
+        workSheet.Protect("products", SheetProtectionType.None);
+        return workSheet;
+    }
+}
+
+public class Metadata
+{
+    public const string CurrentSchema = "1.0";
+
+    public string Schema { get; set; }
 }
