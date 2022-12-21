@@ -12,6 +12,12 @@ using System.Reflection;
 using Spire.Xls.Core.Spreadsheet.Collections;
 using System.Drawing;
 using System.Runtime.CompilerServices;
+using System.Collections;
+using System.Collections.Concurrent;
+using System.Diagnostics;
+using System.Security.Cryptography.X509Certificates;
+using System.Security.Cryptography.Xml;
+using System.Runtime.Intrinsics.X86;
 
 public class Program
 {
@@ -79,101 +85,101 @@ public class Program
         #region SpireXls
 
 
-        var technologiesObj = new Technology();
-        var brandObj = new Brand();
+        //var technologiesObj = new Technology();
+        //var brandObj = new Brand();
 
-        var technologies = technologiesObj.GetTechnologies();
-        var brands = brandObj.GetBrands();
+        //var technologies = technologiesObj.GetTechnologies();
+        //var brands = brandObj.GetBrands();
 
-        var combinationsObj = new Technology_Brand();
-        var combinations = combinationsObj.GetCombinations();
+        //var combinationsObj = new Technology_Brand();
+        //var combinations = combinationsObj.GetCombinations();
 
-        //Create a Workbook object
-        Workbook workbook = new Workbook();
+        ////Create a Workbook object
+        //Workbook workbook = new Workbook();
 
 
-        FileStream fileStream = File.OpenRead("..\\..\\..\\ExcelImport\\CustomProductCatalog.xlsm");
-        fileStream.Seek(0, SeekOrigin.Begin);
-        workbook.LoadFromStream(fileStream);
-        //Initailize worksheet
-        //workbook.LoadFromFile("CustomProductCatalog.xlsm");
-        //Get the first worksheet 
-        Worksheet sheet = workbook.Worksheets[0];
-        var columnIndex = 0;
-        sheet[1, 1].Value = "Technology";
-        sheet.Columns[columnIndex].ColumnWidth = 20;
-        sheet.Columns[columnIndex].Style.Font.IsBold = true;
-        var numHeaderRows1 = sheet.LastDataRow;
+        //FileStream fileStream = File.OpenRead("..\\..\\..\\ExcelImport\\CustomProductCatalog.xlsm");
+        //fileStream.Seek(0, SeekOrigin.Begin);
+        //workbook.LoadFromStream(fileStream);
+        ////Initailize worksheet
+        ////workbook.LoadFromFile("CustomProductCatalog.xlsm");
+        ////Get the first worksheet 
+        //Worksheet sheet = workbook.Worksheets[0];
+        //var columnIndex = 0;
+        //sheet[1, 1].Value = "Technology";
+        //sheet.Columns[columnIndex].ColumnWidth = 20;
+        //sheet.Columns[columnIndex].Style.Font.IsBold = true;
+        //var numHeaderRows1 = sheet.LastDataRow;
 
-        var columnIndex1 = 1;
-        sheet[1, 2].Value = "Brand";
-        sheet.Columns[columnIndex1].ColumnWidth = 20;
-        sheet.Columns[columnIndex1].Style.Font.IsBold = true;
-        var numHeaderRow2 = sheet.LastDataRow;
-
-        //Set the values of the drop-down list 
-        //sheet.Range["A2"].DataValidation.Values = technologies.ToArray();
-        sheet.Range["AX1"].Text = "Technologies";
-        for (int i = 1; i < technologies.Count ; i++)
-        {
-            sheet.Range["AX" + (i+1)].Text = technologies[i];
-        }
-        
-
-        CellRange rangeName = sheet.Range["A2"];
-        rangeName.DataValidation.AllowType = CellDataType.Formula;
-        rangeName.DataValidation.DataRange = sheet.Range["AX2:AX" + technologies.Count];
-        rangeName.DataValidation.IgnoreBlank = true;
-        rangeName.Activate();
-        //hide column X                                 
-        //sheet.HideColumn(sheet.Range["AX1"].Column);
-
-        //Create a drop-down list in the specified cell
-        sheet.Range["A2"].DataValidation.IsSuppressDropDownArrow = false;
+        //var columnIndex1 = 1;
+        //sheet[1, 2].Value = "Brand";
+        //sheet.Columns[columnIndex1].ColumnWidth = 20;
+        //sheet.Columns[columnIndex1].Style.Font.IsBold = true;
+        //var numHeaderRow2 = sheet.LastDataRow;
 
         ////Set the values of the drop-down list 
-        //sheet.Range["B2"].DataValidation.Values = brands.ToArray();
-        sheet.Range["AY1"].Text = "Brands";
-        for (int i = 1; i < brands.Count; i++)
-        {
-            sheet.Range["AY" + (i + 1)].Text = brands[i];
-        }
+        ////sheet.Range["A2"].DataValidation.Values = technologies.ToArray();
+        //sheet.Range["AX1"].Text = "Technologies";
+        //for (int i = 1; i < technologies.Count ; i++)
+        //{
+        //    sheet.Range["AX" + (i+1)].Text = technologies[i];
+        //}
 
-        CellRange rangeNameB = sheet.Range["B2"];
-        rangeNameB.DataValidation.AllowType = CellDataType.Formula;
-        rangeNameB.DataValidation.DataRange = sheet.Range["AY2:AY" + brands.Count];
-        rangeNameB.DataValidation.IgnoreBlank = true;
-        rangeNameB.Activate();
-        //hide column X                                 
-        //sheet.HideColumn(sheet.Range["AY1"].Column);
 
+        //CellRange rangeName = sheet.Range["A2"];
+        //rangeName.DataValidation.AllowType = CellDataType.Formula;
+        //rangeName.DataValidation.DataRange = sheet.Range["AX2:AX" + technologies.Count];
+        //rangeName.DataValidation.IgnoreBlank = true;
+        //rangeName.Activate();
+        ////hide column X                                 
+        ////sheet.HideColumn(sheet.Range["AX1"].Column);
 
         ////Create a drop-down list in the specified cell
-        sheet.Range["B2"].DataValidation.IsSuppressDropDownArrow = false;
+        //sheet.Range["A2"].DataValidation.IsSuppressDropDownArrow = false;
 
-        AddMetadataWorksheet(workbook);
-        INamedRange namedRange;
-        var startColumn = 10;
-        foreach (var item in combinations)
-        {
-            var columnName = GetExcelLetter(startColumn);
-            sheet[1, startColumn].Value = TrimAllInvalidCharacters(item.Key); // TrimAllWhiteSpaces(item.Key).Replace("-","").Replace("&","");
-            sheet.Columns[startColumn - 1].ColumnWidth = 30;
-            sheet.Rows[0].Style.Font.IsBold = true;
-            namedRange = workbook.NameRanges.Add(sheet.Range[columnName + 1].Text);
-            int rowNum = 2;
-            for (int i = 0; i < item.Value.Count; i++)
-            {
-                sheet.SetCellValue(rowNum, startColumn, item.Value[i]);
-                rowNum++;
-            }
-            namedRange.RefersToRange = sheet.Range[columnName + 2 + ":" + columnName + (rowNum-1)];
+        //////Set the values of the drop-down list 
+        ////sheet.Range["B2"].DataValidation.Values = brands.ToArray();
+        //sheet.Range["AY1"].Text = "Brands";
+        //for (int i = 1; i < brands.Count; i++)
+        //{
+        //    sheet.Range["AY" + (i + 1)].Text = brands[i];
+        //}
 
-            startColumn++;
-        }
+        //CellRange rangeNameB = sheet.Range["B2"];
+        //rangeNameB.DataValidation.AllowType = CellDataType.Formula;
+        //rangeNameB.DataValidation.DataRange = sheet.Range["AY2:AY" + brands.Count];
+        //rangeNameB.DataValidation.IgnoreBlank = true;
+        //rangeNameB.Activate();
+        ////hide column X                                 
+        ////sheet.HideColumn(sheet.Range["AY1"].Column);
 
 
-        sheet.Range["B2"].DataValidation.Formula1 = GetDependentSelectionFormula("A", 2);//"=INDIRECT($A$2)";//=INDIRECT(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE($A$2,\" \",\"\"),\"-\",\"\"),\"&\",\"\"))";
+        //////Create a drop-down list in the specified cell
+        //sheet.Range["B2"].DataValidation.IsSuppressDropDownArrow = false;
+
+        //AddMetadataWorksheet(workbook);
+        //INamedRange namedRange;
+        //var startColumn = 10;
+        //foreach (var item in combinations)
+        //{
+        //    var columnName = GetExcelLetter(startColumn);
+        //    sheet[1, startColumn].Value = TrimAllInvalidCharacters(item.Key); // TrimAllWhiteSpaces(item.Key).Replace("-","").Replace("&","");
+        //    sheet.Columns[startColumn - 1].ColumnWidth = 30;
+        //    sheet.Rows[0].Style.Font.IsBold = true;
+        //    namedRange = workbook.NameRanges.Add(sheet.Range[columnName + 1].Text);
+        //    int rowNum = 2;
+        //    for (int i = 0; i < item.Value.Count; i++)
+        //    {
+        //        sheet.SetCellValue(rowNum, startColumn, item.Value[i]);
+        //        rowNum++;
+        //    }
+        //    namedRange.RefersToRange = sheet.Range[columnName + 2 + ":" + columnName + (rowNum-1)];
+
+        //    startColumn++;
+        //}
+
+
+        //sheet.Range["B2"].DataValidation.Formula1 = GetDependentSelectionFormula("A", 2);//"=INDIRECT($A$2)";//=INDIRECT(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE($A$2,\" \",\"\"),\"-\",\"\"),\"&\",\"\"))";
 
 
 
@@ -194,9 +200,17 @@ public class Program
 
 
         //Save the result document
-        workbook.SaveToFile("CustomProductCatalog.xls", ExcelVersion.Version2010);
+        //workbook.SaveToFile("CustomProductCatalog.xls", ExcelVersion.Version2010);
 
         #endregion
+
+
+        var dict = new Dictionary<string, List<string>>();
+
+        dict.Add("Test1", new List<string>() { "1"});
+        dict.Add("Test2", new List<string>() { "1", "2"});
+
+        Console.WriteLine(dict.Values.Select(x=> x.Count).Max());
     }
 
     private static string GetExcelLetter(int columnNum)

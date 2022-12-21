@@ -47,8 +47,8 @@ namespace coreWebApp.Controllers
 
         public IActionResult Index()
         {
-            //string inFilePath = "C:\\Users\\PKorada\\Documents\\Projects\\Fundamentals\\coreWebApp\\Files\\V4\\MudProducts.xlsx";
-            //string outFilePath = "C:\\Users\\PKorada\\Documents\\Projects\\Fundamentals\\coreWebApp\\Files\\V3\\rewriteFile.json";
+            string inFilePath = "C:\\Users\\PKorada\\Documents\\Projects\\Fundamentals\\coreWebApp\\Files\\V5\\Legacy M-I Sales Hierachy 2022 Dec 14th adding SG values.xlsx";
+            string outFilePath = "C:\\Users\\PKorada\\Documents\\Projects\\Fundamentals\\coreWebApp\\Files\\V5\\rewriteFile.json";
             //var rewritePath = "C:\\Users\\PKorada\\Documents\\Projects\\Fundamentals\\coreWebApp\\Files\\V4\\brand.json";
             //var newId = Guid.NewGuid().ToString("N");
             //UsingOleDb(inFilePath, outFilePath, "Technology");
@@ -56,16 +56,16 @@ namespace coreWebApp.Controllers
 
             //var products = UsingOleDbToGetBrandValues(inFilePath, "NewStructure");
             //GenericRewriteJson(products, rewritePath);
+            UpdateSGs(inFilePath, outFilePath, "NewStructure");
 
-           
-
-            using (var stream = GetExcelTemplate())
-            {
-                return File(
-                    stream.ToArray(),
-                    "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-                    "products-template.xlsm");
-            }
+            return View();
+            //using (var stream = GetExcelTemplate())
+            //{
+            //    return File(
+            //        stream.ToArray(),
+            //        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            //        "products-template.xlsm");
+            //}
         }
 
         public MemoryStream GetExcelTemplate()
@@ -250,6 +250,37 @@ namespace coreWebApp.Controllers
             }
         }
 
+        private static void UpdateSGs(string inFilePath, string outFilePath, string sheetName)
+        {
+            //"HDR=Yes;" indicates that the first row contains column names, not data.
+            Dictionary<string, decimal?> data = new Dictionary<string, decimal?>();
+            var connectionString = $@"
+        Provider=Microsoft.ACE.OLEDB.12.0;
+        Data Source={inFilePath};
+        Extended Properties=""Excel 12.0 Xml;HDR=YES""";
+            using (var conn = new OleDbConnection(connectionString))
+            {
+                conn.Open();
+                var cmd = conn.CreateCommand();
+                cmd.CommandText = $@"SELECT * FROM [{sheetName}$]";
+                
+                using (var dr = cmd.ExecuteReader())
+                {
+
+                    foreach (DbDataRecord row in dr)
+                    {
+                        if (row[9].ToString() != "#N/A" && !string.IsNullOrEmpty(row[9].ToString()))
+                        {
+                            decimal? sg = string.IsNullOrEmpty(row[10].ToString()) ? null : decimal.Parse(row[10].ToString());
+                            data.Add(row[9].ToString(), sg);
+                        }
+                    }
+                }
+            }
+
+            RewriteJson(data);
+        }
+
 
         private static Dictionary<string,string> UsingOleDbToGetProductKeyValues(string inFilePath, string sheetName)
         {
@@ -411,7 +442,7 @@ namespace coreWebApp.Controllers
 
                 }
             }
-            RewriteJson(recipes);
+            //RewriteJson(recipes);
         }
 
         private static void GenericRewriteJson(Dictionary<string, HashSet<string>> products, string rewritePath)
@@ -421,31 +452,23 @@ namespace coreWebApp.Controllers
             System.IO.File.WriteAllText(rewritePath, JsonPrettify(jsonString));
         }
 
-        private static void RewriteJson(Dictionary<string,string> products)
+        private static void RewriteJson(Dictionary<string, decimal?> products)
         {
-            var path = "C:\\Users\\PKorada\\Documents\\Projects\\Fundamentals\\coreWebApp\\Files\\V3\\Recipes\\mud-recipes-v2.json";
-            var rewritePath = "C:\\Users\\PKorada\\Documents\\Projects\\Fundamentals\\coreWebApp\\Files\\V3\\Recipes\\rewriteFile.json";
+            var path = "C:\\Users\\PKorada\\Documents\\Projects\\Fundamentals\\coreWebApp\\Files\\V5\\mud-products-v2.json";
+            var rewritePath = "C:\\Users\\PKorada\\Documents\\Projects\\Fundamentals\\coreWebApp\\Files\\V5\\rewriteFile.json";
 
             string jsonString = System.IO.File.ReadAllText(path);
 
 
             var jsonParsed = JArray.Parse(jsonString);
 
-            foreach (var item in jsonParsed)
+            foreach (var product in jsonParsed)
             {
-                foreach (var recipe in item["Recipes"])
-                {
-                    foreach (var product in recipe["Products"])
-                    {
-                        string val;
-                        products.TryGetValue(product[0].Value<string>().Trim(), out val);
+                decimal? val;
+                products.TryGetValue(product["Id"].Value<string>().Trim(), out val);
 
-                        if (!String.IsNullOrEmpty(val))
-                        {
-                            product[0] = val;
-                        }
-                    }
-                }
+                product["SG"] = val;
+                
             }
 
             var json = jsonParsed.ToString();
